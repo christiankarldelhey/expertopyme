@@ -1783,8 +1783,8 @@
 
 
 .skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
-	background: #0695d6;
-	color: #FFFFFF;
+	background:#e9e9e9;
+	color:#333333;
 }
 
 .skin-blue .sidebar-menu > li:hover > ul, .skin-blue .sidebar-menu > li.active > ul {
