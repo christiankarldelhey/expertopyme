@@ -33,4 +33,18 @@
   border-bottom: 1px solid #ccc;
 }
 
-.table-item:last-child {border-bottom: none;}
+.table-item:last-child{
+  border-bottom: none;
+}
+
+.text-with-icon i{
+  padding-top: 2px;
+  float: left;
+}
+.text-with-icon h4{
+  padding-left: 20px;
+}
+.btn .fa.fa-lg{
+  line-height: 1em;
+  font-size: 1.7em;
+}
