@@ -26,3 +26,11 @@
 .progress-bar, .progress{
   height: 0.5rem;
 }
+
+.download-item{
+  padding: 15px 0px;
+  margin: 0px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.row:last-child .download-item{border-bottom: none;}
