@@ -51,3 +51,9 @@
   line-height: 1em;
   font-size: 1.7em;
 }
+.form-group textarea.form-control{
+  font-size: 20px;
+  font-weight: 400;
+  height: 180px;
+  padding: 10px 20px;
+}

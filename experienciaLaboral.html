@@ -350,7 +350,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      <section class="container p-t-2">
+      <section class="content-header p-t-2">
 
         <ol class="breadcrumb m-t-0 m-b-3">
           <li class="breadcrumb-item"><a href="#">Inicio</a></li>
@@ -368,35 +368,67 @@
             <!-- FORM AZUL DATOS PERSONALES -->
             <form class="form-azul">
 
-              <div class="row aligner table-item">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="control-label">Profesión</label>
-                    <select class="form-control borrar-select" name="">
-                    <option value="" hidden></option>
-                    <option value="1" class="ignore">opt1</option>
-                    <option value="2" class="ignore">opt2</option>
-                  </select>
-                    <i class="fa fa-caret-down bg-primary text-center m-r-0"></i>
+              <div class="table-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Profesión</label>
+                      <select class="form-control borrar-select" name="">
+                      <option value="" hidden></option>
+                      <option value="1" class="ignore">opt1</option>
+                      <option value="2" class="ignore">opt2</option>
+                    </select>
+                      <i class="fa fa-caret-down bg-primary text-center m-r-0"></i>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <h4>¿Pertenece a una institución?</h4>
-                    <label class="radio-inline"><input type="radio" name="optradio">Option 1</label>
-                    <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <h4>¿Pertenece a una institución?</h4>
+                      <label class="radio-inline"><input type="radio" name="optradio">Option 1</label>
+                      <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="row table-item">
-                <div class="container">
+              <div class="table-item">
+                <h4>Trabajos en relación de dependencia en puestos de Jefatura o superiores</h4>
+                <div class="text-with-icon m-t-1">
+                  <i class="fa fa-exclamation-circle text-muted"></i>
+                  <h4>Le informamos que en caso de declarar trabajos en relación de dependencia Ud. deberá obligatoriamente adjuntar la historia laboral de Anses</h4>
+                </div>
+                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
+              </div>
 
-                  <div class="col-md-8">
-                    <p>Trabajos en relación de dependencia en puestos de Jefatura o superiores</p>
-                    <p><i class="fa fa-exclamation-circle text-muted"></i> Le informamos que en caso de declarar trabajos en relación de dependencia Ud. deberá obligatoriamente adjuntar la historia laboral de Anses</p>
-                    <button type="button" class="btn btn-primary"><i class="fa fa-plus-square-o fa-lg"></i>&nbsp;&nbsp;AGREGAR NUEVO</button>
-                  </div>
+              <div class="table-item">
+                <h4>En caso de declarar trabajos en relación de dependencia, adjuntar historial laboral de ANSES</h4>
+                <a href="#" class="m-t-2 btn btn-link btn">Seleccionar Archivo</a>
+              </div>
+
+              <div class="table-item">
+                <h4>Temáticas utilizadas<br>
+                Seleccione con X dentro de cada grupo las temáticas que conoce y que haya utilizado asistiendo a empresas</h4>
+                <h4 class="m-t-2">Procesos:</h4>
+                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
+                <h4 class="m-t-2">Finanzas:</h4>
+                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
+                <h4 class="m-t-2">Administración:</h4>
+                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
+                <h4 class="m-t-2">Recursos Humanos:</h4>
+                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
+                <h4 class="m-t-2">Sistemas de Gestión:</h4>
+                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
+                <h4 class="m-t-2">Tecnología:</h4>
+                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
+              </div>
+
+              <div class="table-item">
+                <h4>Breve descripción de su perfil profesional:</h4>
+                <div class="form-group m-t-2">
+                  <textarea class="form-control" type="text"></textarea>
+                </div>
+                <div class="text-center">
+                  <a href="#" class="m-t-2 btn btn-success btn">Guardar</a>
                 </div>
               </div>
 
