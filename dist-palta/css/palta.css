@@ -168,6 +168,12 @@ a img.aligncenter {
   }
 }
 
+/*MARGINS*/
+
+.mt-30 {
+  margin-top: 10px !important;
+}
+
 /*HEADER*/
 .menuLista {
   list-style: none;

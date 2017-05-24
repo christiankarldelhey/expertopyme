@@ -22,6 +22,9 @@
   min-height:auto !important;
 }
 
+/* MEDIA QUERIES */
+
+
 /*ProgressBar en Tabla*/
 .progress-bar, .progress{
   height: 0.5rem;
