@@ -344,11 +344,19 @@
     </section>
     <!-- /.sidebar -->
   </aside>
+
+
   
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-
-    <section class="container">
+    <section class="container p-t-2">
+      <ol class="breadcrumb m-t-0 m-b-3">
+        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="#">Acciones</a></li>
+        <li class="breadcrumb-item"><a href="#">Inscribirme como Experto</a></li>
+        <li class="breadcrumb-item active">Datos Personales</li>
+      </ol>
+      <h3 class="m-b-2">Inscribirme como experto PYME </h3>
       <div class="panel panel-default">
         <div class="panel-heading bg-primary">Datos personales</div>
         <div class="panel-body">
@@ -388,10 +396,10 @@
               <label class="control-label">Género</label>
                 <div class="btn-group btn-group-justified" data-toggle="buttons">
                   <label href="#" class="btn btn-default active">
-                      <input type="radio" name="gender" id="female" value="female" class="hidden" data-fv-field="gender"> Masc.
+                      <input  class="text-center" type="radio" name="gender" id="female" value="female" class="hidden" data-fv-field="gender"> Masc.
                   </label>
-                  <label href="#" class="btn btn-default btn-sm">
-                      <input type="radio" name="gender" id="male" value="male" class="hidden" checked="" data-fv-field="gender"> Fem.
+                  <label href="#" class="btn btn-default">
+                      <input type="radio" name="gender" id="male" value="male" class="hidden" checked="" data-fv-field="gender" class="text-center"> Fem.
                   </label>
                 </div>
               </div>
@@ -535,14 +543,16 @@
 
             <div class="col-md-6">
               <div class="p-l-0 col-md-5">
-                <div class="form-group m-t-2">
-                  <input class="form-control " placeholder="Longitud" type="text" name="" value="">
+                <div class="form-group">
+                  <label class="control-label">G</label>
+                  <input class="form-control" placeholder="Longitud" type="text" name="" value="">
                 </div> 
               </div>
             </div>
+            </div>
 
-            <div class="center-block">
-              <button class="btn btn-success">GUARDAR</button>
+            <div class="">
+              <button class="btn btn-success p-l-2 p-r-2 btn-block">GUARDAR</button>
             </div>
 
 
