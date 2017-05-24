@@ -10,11 +10,11 @@
 
 .form-azul select + i.fa {
   float: right;
-  margin-top: -51px;
+  margin-top: -54px;
   margin-right: 5px;
   pointer-events: none;
   background-color: black;
-  padding: 16px 21px;
+  padding: 17px 22px;
   font-size: 20px;
 }
 
