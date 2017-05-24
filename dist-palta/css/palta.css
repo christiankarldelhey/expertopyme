@@ -651,6 +651,15 @@ a.unlink {
   color: #7e62b3;
 }
 
+.text-white {
+  color: #ffffff !important;
+}
+
+.bg-goscuro{
+  background-color: #666 !important;
+}
+
+
 
 /*FUNCIONES DE BOOTSTRAP V4*/
 

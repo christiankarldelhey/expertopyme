@@ -21,3 +21,8 @@
 .panel-heading {
   min-height:auto !important;
 }
+
+/*ProgressBar en Tabla*/
+.progress-bar, .progress{
+  height: 0.5rem;
+}
