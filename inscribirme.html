@@ -467,8 +467,18 @@
 
             <div class="form-group">
               <h4>Ha realizado trabajos de asesoramiento técnico?</h4>
-              <label class="radio-inline"><input type="radio" name="optradio">Si</label>
-              <label class="radio-inline"><input type="radio" name="optradio">No</label>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <label href="#" class="btn btn-default active">
+                    <input  class="text-center" type="radio" name="yesNo" id="si" value="si" class="hidden" data-fv-field="yesNo">Si
+                </label>
+                    <label href="#" class="btn btn-default">
+                    <input type="radio" name="yesNo" id="no" value="no" class="hidden" checked="" data-fv-field="yesNo" class="text-center">No
+                </label>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
