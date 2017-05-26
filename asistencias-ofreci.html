@@ -364,42 +364,64 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <section class="container p-t-2">
-      <ol class="breadcrumb m-t-0 m-b-3">
-        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-        <li class="breadcrumb-item"><a href="#">Acciones</a></li>
-        <li class="breadcrumb-item"><a href="#">Inscribirme como Experto</a></li>
-        <li class="breadcrumb-item active">Asistencia que Ofrecí</li>
-      </ol>
-      <h3 class="m-b-2">Inscribirme como experto PYME </h3>
-      <div class="panel panel-default">
-        <div class="panel-heading bg-primary text-white">Asistencias que Ofrecí</div>
-        <div class="panel-body">
 
-         <!-- FORM AZUL DATOS PERSONALES -->        
-         <form class="form-azul">
-          <div class="col-md-4">
-            <label class="control-label">¿Ha realizado trabajos de asesoramiento técnico?</label>
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-              <label href="#" class="btn btn-default btn-sm active">
-                <input  class="text-center" type="radio" name="gender" id="female" value="female" class="hidden" data-fv-field="gender"> Sí
-              </label>
-              <label href="#" class="btn btn-default btn-sm">
-                <input type="radio" name="gender" id="male" value="male" class="hidden" checked="" data-fv-field="gender" class="text-center"> No
-              </label>
+        <ol class="breadcrumb m-t-0 m-b-3">
+          <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="#">Acciones</a></li>
+          <li class="breadcrumb-item"><a href="#">Inscribirme como Experto</a></li>
+          <li class="breadcrumb-item active">Asistencia que ofrecí</li>
+        </ol>
+
+        <h3 class="m-b-2">Inscribirme como experto PYME </h3>
+        <div class="panel panel-default">
+          <div class="panel-heading bg-primary">
+            <h4 class="text-white">Asistencias que Ofrecí</h4></div>
+
+          <div class="panel-body">
+            <!-- FORM AZUL DATOS PERSONALES -->
+            <form class="form-azul">
+
+              <div class="col-xs-12">
+                <label class="control-label">¿Ha realizado trabajos de Asesoramiento Técnico?</label>
+              </div>
+
+              <div class="col-md-3 m-t-1">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                  <label href="#" class="btn btn-default btn-sm">
+                    <input class="text-center" type="radio" name="gender" id="female" value="female" data-fv-field="gender"> Sí
+                  </label>
+                  <label href="#" class="btn btn-default btn-sm active">
+                    <input type="radio" name="gender" id="male" value="male" class="hidden" checked="" data-fv-field="gender"> No
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-xs-12"><hr></div>
+                    <div class="col-md-10">
+                      <p>Trabajos de Asesoramiento Técnico realizados</p>
+                      <p><i class="fa fa-exclamation-circle text-muted"></i> Le informamos que en caso de declarar asesoramientos técnicos a empresas, a los fines de trabajar con mayor celeridad Ud. podrá adjuntar los certificados de las asesorías técnicas realizadas.</p>
+                      <button type="button" class="btn btn-primary m-t-2"><i class="fa fa-plus-square-o fa-lg"></i>&nbsp;&nbsp;AGREGAR NUEVO</button>
+                    </div>
+               
+
+                <p>Adjuntar los certificados de las Asesorías declaradas (Archivo ZIP)</p>
+                <button type="button" class="btn btn-default">SELECCIONAR ARCHIVO</button>
+
+
+                <div class="row table-item">
+                  <div class="container">
+
+                  </div>
+                </div>
+
+                <div class="text-center col-md-4 col-md-offset-4 m-t-3 m-b-2">
+                  <button class=" col-md-12 btn btn-success">GUARDAR</button>
+                </div> 
+
+              </form>
             </div>
-            <div class="col-md-8">
-            </div>
-
-            <div class="col-xs-12">
-               <hr>
-            </div>
-           
-
-          </form>
-
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
 
     <section class="container-fluid bg-info text-center center-block">
       <button class="btn bg-white text-primary"><i class="fa fa-print text-primary m-r-1" aria-hidden="true"></i> IMPRIMIR</button>
