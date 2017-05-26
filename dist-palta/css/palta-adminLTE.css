@@ -58,7 +58,24 @@
   padding: 10px 20px;
 }
 
-
 .bg-none {
 	background:none;
 }
+
+.btn-contorno {
+  border:1px solid #0695D6;
+  background-color: white;
+  color: #0695D6;
+  padding: 12px 25px;
+  text-transform: capitalize;
+  font-weight: 550;
+}
+
+.btn-contorno:hover {
+  border:1px solid #0695D6 !important;
+  color: #0695D6;
+}
+
+
+
+
