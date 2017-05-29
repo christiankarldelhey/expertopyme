@@ -1,7 +1,7 @@
 
 /* FORM-AZUL */
 
-/* implemento boton de select */
+/* implemento boton de select 
 .form-azul select.borrar-select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -16,7 +16,7 @@
   background-color: black;
   padding: 17px 22px;
   font-size: 20px;
-}
+}*/
 
 .panel-heading {
   min-height:auto !important;
