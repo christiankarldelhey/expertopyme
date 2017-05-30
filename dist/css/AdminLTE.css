@@ -5023,3 +5023,7 @@ table.text-center th {
 .table > tbody > tr > td .btn.btn-sm {
 	margin-bottom:0 !important;
 }
+
+.checkbox-toggle {
+	background:none;
+}
