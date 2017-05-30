@@ -84,6 +84,13 @@
 	border-top: none;
 }
 
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	clear:both;
+}
+
 @media screen and (max-width: 767px) {
 	.table-responsive {
 		border: none;

@@ -5027,3 +5027,7 @@ table.text-center th {
 .checkbox-toggle {
 	background:none;
 }
+
+.content-wrapper {
+	position: relative;
+}
