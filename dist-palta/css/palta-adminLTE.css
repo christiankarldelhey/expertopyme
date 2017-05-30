@@ -76,6 +76,16 @@
   color: #0695D6;
 }
 
+.box-body .table-responsive {
+	padding:20px;
+}
 
+.table-responsive tr:nth-child(1) td {
+	border-top: none;
+}
 
-
+@media screen and (max-width: 767px) {
+	.table-responsive {
+		border: none;
+	}
+}
