@@ -462,18 +462,56 @@
         <div class="panel-heading bg-primary text-white">
           <h4>Información Académica</h4></div>
         <div class="panel-body">
+        
+        <div id="infoacademica" class="col-md-12">
 
-            <div class="table-item">
-              <h4>Información Académica</h4>
-              <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
-            </div>
-            <div class="table-item text-center">
-              <a href="#" class="m-t-2 btn btn-success btn">Guardar</a>
-            </div>
-          </div>
+            <div id="clonedInput1" class="clonedInput m-t-1">
+                <div>
+                    <label for="txtCategory" class="">Learning category <span class="requiredField">*</span></label>
+                    <select class="" name="txtCategory[]" id="category1">
+                        <option value="">Please select</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="txtSubCategory" class="">Sub-category <span class="requiredField">*</span></label>
+                    <select class="" name="txtSubCategory[]" id="subcategory1">
+                        <option value="">Please select category</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="txtSubSubCategory">Sub-sub-category <span class="requiredField">*</span></label>
+                    <select name="txtSubSubCategory[]" id="subsubcategory1">
+                        <option value="">Please select sub-category</option>
+                    </select>
+                </div>
+                <div class="actions m-t-1">
+                    <button class="clone btn btn-primary"><i class="fa fa-plus-square-o"></i> Agregar nueva</button> 
+                    <button class="remove btn btn-default">Borrar</button>
+                </div>
+            </div>          
 
         </div>
-
+        
+            <div class="col-md-12 m-t-1">
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-arrow-circle-o-right fa-fw fa-4x"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>Importante!</h4>
+                            <p class="margin-0">Una vez enviados, los datos no se podrán volver a editar.</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            
+            <div class="text-center col-md-4 col-md-offset-4 m-t-1 m-b-2">
+              <button class="col-md-12 btn btn-success">GUARDAR</button>
+            </div>
+       
+		</div>
     </section>
     <!-- /.content -->
 
@@ -787,6 +825,34 @@
 </script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
+<script>
+var regex = /^(.+?)(\d+)$/i;
+var cloneIndex = $(".clonedInput").length;
+
+function clone(){
+    $(this).parents(".clonedInput").clone()
+        .appendTo("#infoacademica")
+        .attr("id", "clonedInput" +  cloneIndex)
+        .find("*")
+        .each(function() {
+            var id = this.id || "";
+            var match = id.match(regex) || [];
+            if (match.length == 3) {
+                this.id = match[1] + (cloneIndex);
+            }
+        })
+        .on('click', 'button.clone', clone)
+        .on('click', 'button.remove', remove);
+    cloneIndex++;
+}
+function remove(){
+    $(this).parents(".clonedInput").remove();
+}
+$("button.clone").on("click", clone);
+
+$("button.remove").on("click", remove);
+</script>
 
 </body>
 </html>
