@@ -63,17 +63,22 @@
 }
 
 .btn-contorno {
-  border:1px solid #0695D6;
-  background-color: white;
-  color: #0695D6;
-  padding: 12px 25px;
-  text-transform: capitalize;
-  font-weight: bold;
+	background-color: white;
+	color: #0695D6;
+	padding: 12px 25px;
+	text-transform: capitalize;
+	font-weight: bold;
+	
+	border: 2px solid #0695D6;
+	
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
 }
 
 .btn-contorno:hover {
-  border:2px solid #0695D6 !important;
-  color: #0695D6;
+	border:2px solid #3c8dbc !important;
+	color: #3c8dbc;
 }
 
 .box-body .table-responsive {
