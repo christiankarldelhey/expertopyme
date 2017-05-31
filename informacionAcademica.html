@@ -466,25 +466,21 @@
         <div id="infoacademica" class="col-md-12">
 
             <div id="clonedInput1" class="clonedInput m-t-1">
-                <div>
-                    <label for="txtCategory" class="">Learning category <span class="requiredField">*</span></label>
-                    <select class="" name="txtCategory[]" id="category1">
-                        <option value="">Please select</option>
-                    </select>
+                <div class="col-md-4">
+                    <label class="control-label" for="txtCategory">Label <span class="requiredField">*</span></label>
+                    <input class="form-control" name="txtCategory[]" id="category1">
                 </div>
-                <div>
-                    <label for="txtSubCategory" class="">Sub-category <span class="requiredField">*</span></label>
-                    <select class="" name="txtSubCategory[]" id="subcategory1">
-                        <option value="">Please select category</option>
-                    </select>
+                <div class="col-md-4">
+                    <label class="control-label" for="txtSubCategory" class="">Label <span class="requiredField">*</span></label>
+                    <input class="form-control" name="txtSubCategory[]" id="subcategory1">
                 </div>
-                <div>
-                    <label for="txtSubSubCategory">Sub-sub-category <span class="requiredField">*</span></label>
-                    <select name="txtSubSubCategory[]" id="subsubcategory1">
+                <div class="col-md-4">
+                    <label class="control-label" for="txtSubSubCategory">Select <span class="requiredField">*</span></label>
+                    <select name="txtSubSubCategory[]" id="subsubcategory1" class="form-control">
                         <option value="">Please select sub-category</option>
                     </select>
                 </div>
-                <div class="actions m-t-1">
+                <div class="actions m-t-1 col-md-12">
                     <button class="clone btn btn-primary"><i class="fa fa-plus-square-o"></i> Agregar nueva</button> 
                     <button class="remove btn btn-default">Borrar</button>
                 </div>
