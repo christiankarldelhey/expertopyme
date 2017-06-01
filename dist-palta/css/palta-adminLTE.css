@@ -18,6 +18,10 @@
   font-size: 20px;
 }*/
 
+.form-azul select, input {
+  border-radius: 4px !important;
+}
+
 .panel-heading {
   min-height:auto !important;
 }
