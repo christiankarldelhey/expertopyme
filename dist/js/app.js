@@ -248,10 +248,14 @@ function _init() {
       _this.fix();
       _this.fixSidebar();
       $('body, html, .wrapper').css('height', 'auto');
-      $(window, ".wrapper").resize(function () {
-        _this.fix();
-        _this.fixSidebar();
-      });
+      // $(window, ".wrapper").resize(function () {
+      //   _this.fix();
+      //   _this.fixSidebar();
+      // });
+
+      $(window, ".wrapper").resize(_.debounce(function () {
+      _this.fix();
+      _this.fixSidebar(); }, 250));
     },
     fix: function () {
       // Remove overflow from .wrapper if layout-boxed exists

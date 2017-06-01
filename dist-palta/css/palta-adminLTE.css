@@ -100,6 +100,22 @@
 	clear:both;
 }
 
+
+.section-botonera {
+  padding-bottom: 60px;
+}
+
+.section-botonera button.bg-white {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.section-botonera button.bg-white i {
+  margin-right: 5px;
+}
+
+
+
 @media screen and (max-width: 767px) {
 	.table-responsive {
 		border: none;
