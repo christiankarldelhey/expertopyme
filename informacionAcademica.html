@@ -19,6 +19,11 @@
   <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
   <!-- Theme style -->
 
+    <!-- Datepicker CSSs -->
+    <link href="plugins/datepicker/datepicker3.css" rel="stylesheet">
+
+
+
   <!-- ADMIN-LTE dist -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -476,7 +481,7 @@
                         <input class="form-control" name="txtSubCategory[]" id="subcategory1">
                     </div>
                     <div class="col-md-4">
-                        <label class="control-label" for="txtxxx" class="">Carrera <span class="requiredField">*</span></label>
+                        <label class="control-label" for="txtxxx" class="control-label">Carrera <span class="requiredField">*</span></label>
                         <div class="btn-group btn-group-justified" data-toggle="buttons">
                           <label href="#" class="btn btn-default">
                           <input  class="text-center" type="radio" name="yesNo" id="si" value="si" class="hidden" data-fv-field="yesNo">Completa
@@ -486,14 +491,12 @@
                             </label>
                         </div>
                     </div>                
-                    <!--
                     <div class="col-md-4">
                         <label class="control-label" for="txtSubSubCategory">Select <span class="requiredField">*</span></label>
-                        <select name="txtSubSubCategory[]" id="subsubcategory1" class="form-control">
-                            <option value="">Please select sub-category</option>
-                        </select>
+                        
+						<input type="text" name="datefilter" id="dateinput" class="dateinput" value="" />
                     </div>
-                    -->
+                    
                     <div class="actions m-t-1 col-md-12">
                         <button class="clone btn btn-primary"><i class="fa fa-plus-square-o"></i> Agregar nueva</button> 
                         <button class="remove btn btn-default m-l-1">Borrar</button>
@@ -602,6 +605,16 @@
 <!-- Page Script -->
 
 
+
+<!-- Datepicker -->
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="plugins/datepicker/locales/bootstrap-datepicker.es.js"></script>
+
+<script type="application/javascript">
+	$('input.dateinput').datepicker({
+		language: "es"
+	});
+</script>
 
 <script>
   $(function () {
