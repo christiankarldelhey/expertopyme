@@ -115,11 +115,21 @@
 }
 
 
+.mobileSelect-container {
+	width: 40%;
+	margin: 0 30%;
+}	
+
 
 @media screen and (max-width: 767px) {
 	.table-responsive {
 		border: none;
 	}
+	
+	.mobileSelect-container {
+		width: 80%;
+		margin: 0 10%;
+	}	
 }
 
 
@@ -142,3 +152,6 @@
     padding: 10px;
     font-size: 15px;
 }
+
+
+

@@ -30,8 +30,14 @@
   <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
 
 
+    <!-- BOOTSTRAP-Tags Input files -->
     <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
     <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/examples/assets/app.css">
+  
+  
+        <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+        <link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
+        <!--END BOOTSTRAP-FULLSCREEN-SELECT files-->  
   
   <!-- PALTA dist-palta -->
   <link rel="stylesheet" href="dist-palta/css/poncho.min.css">
@@ -427,9 +433,14 @@
 
         <div class="col-md-6">
             <div class="form-group">
-                <label class="control-label">CUIT</label>
-                <input class="form-control " type="text" name="" value="">
-            </div>
+                <label class="control-label">Menú</label>
+                <select id="menu" class="form-control mobileSelect">
+                    <option value="pizza">Pizza</option>
+                    <option value="burger">Burger</option>
+                    <option value="tacos">Tacos</option>
+                    <option value="garlic-bread">Garlic Bread</option>
+                </select>
+            </div>        
         </div>
         
         <div class="col-md-2">
@@ -467,9 +478,10 @@
         
         <div class="col-md-12">
             <div class="form-group">
-	            <label class="control-label">Capitales</label>
+	            <label class="control-label">Capitales <small>Separadas por coma ','</small></label>
             	<input id="capitales" type="text" value="" data-role="tagsinput" />
-                <p><small>Para ver el contenido del input: <code>$("input#capitales").tagsinput('items')</code></small></p>
+                <p><small>Para ver el contenido del input: <code>$("input#capitales").tagsinput('items')</code> o <code>$("input#capitales").val()</code><br />
+                <a href="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/" target="_blank">https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/</a></small></p>
             </div>
         </div>
         
@@ -488,7 +500,7 @@
         </div>
         
         <div class="text-center col-md-4 col-md-offset-4 m-t-3 m-b-2">
-            <button class="col-md-12 btn btn-success">ENVIAR</button>
+            <button type="button" class="col-md-12 btn btn-success">ENVIAR</button>
         </div>
         
     
@@ -576,6 +588,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script src="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.js"></script>
 <script src="plugins/bootstrap-tagsinput-latest/examples/assets/app.js"></script>
+
+<!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+<script type="text/javascript" src="plugins/bootstrap-fullscreen-select/js/bootstrap-fullscreen-select.js"></script>
+<!--END BOOTSTRAP-FULLSCREEN-SELECT files-->  
+<script>
+	$('#menu').mobileSelect();
+</script>
 
 <script>
   $(function () {
