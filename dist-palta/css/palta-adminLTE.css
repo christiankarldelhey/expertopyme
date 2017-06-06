@@ -14,6 +14,7 @@
   padding-left: 20px;
 }
 
+
 /* BOTON AGREGAR NUEVO - FA */
 
 .btn .fa.fa-lg{
@@ -59,37 +60,6 @@
   padding: 10px 20px;
 }
 
-
-/* Plugin CraftPip */
-
-.bootstrap-tagsinput {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); */
-    display: inline-block;
-    padding: 6px 8px;
-    color: #555;
-    vertical-align: middle;
-    border-radius: 4px;
-    max-width: 100%;
-    line-height: 48px;
-    cursor: text;
-}
-
-.bootstrap-tagsinput .tag {
-    margin-right: 2px;
-    color: white;
-    padding: 10px;
-    font-size: 15px;
-}
-
-
-.mobileSelect-container {
-  width: 40%;
-  margin: 0 30%;
-} 
-
-
 /* implemento boton de select 
 .form-azul select.borrar-select {
   -webkit-appearance: none;
@@ -110,6 +80,12 @@
 
 /*TABLA*/
 
+/*ProgressBar en Tabla*/
+
+.progress-bar, .progress{
+  height: 0.5rem;
+}
+
 .table-item{
   padding: 15px 0px;
   margin: 0px 15px;
@@ -126,12 +102,6 @@
 
 .table-responsive tr:nth-child(1) td {
   border-top: none;
-}
-
-/*ProgressBar en Tabla*/
-
-.progress-bar, .progress{
-  height: 0.5rem;
 }
 
 /* BAR ABAJO  
@@ -159,7 +129,7 @@
 }
 
 
-/* MEDIA QUERIES */
+
 
 
 @media screen and (max-width: 767px) {
@@ -174,7 +144,31 @@
 }
 
 
+.bootstrap-tagsinput {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); */
+    display: inline-block;
+    padding: 6px 8px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 4px;
+    max-width: 100%;
+    line-height: 48px;
+    cursor: text;
+}
+.bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
 
+
+.mobileSelect-container {
+  width: 40%;
+  margin: 0 30%;
+} 
 
 
 
