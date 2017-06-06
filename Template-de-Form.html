@@ -474,7 +474,7 @@
             </div>
         </div>
         
-        <div class="col-md-5">
+        <div class="col-md-8">
             <div class="form-group">
                 <label class="control-label">Menú</label>
                 <select class="form-control mobileSelect" multiple data-style="info">
@@ -491,13 +491,20 @@
                     <optgroup label="Postre">
                         <option value="helado">Helado</option>
                         <option value="flan">Flan</option>
-                        <option value="cafe">Cafe</option>
                     </optgroup>                    
+                    <option value="otro">Otro</option>                    
                 </select>
             </div>        
         </div>
         
-        <div class="col-md-3">
+        <div class="col-md-12 hidden" id="otros">
+            <div class="form-group">
+	            <label class="control-label">Otros valores para Menú <small></small></label>
+            	<input id="capitales" type="text" value="" data-role="tagsinput" />
+            </div>
+        </div>        
+        
+        <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Fecha de Nacimiento</label>
                 <div class="input-group">
@@ -630,6 +637,7 @@
 
 <!-- Slimscroll -->
 <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+
 <!-- FastClick -->
 <script src="plugins/fastclick/fastclick.js"></script>
 
@@ -654,9 +662,6 @@
 	});
 </script>
 
-<!-- Page Script -->
-
-
 <!-- TagsInput -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script src="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.js"></script>
@@ -664,7 +669,6 @@
 
 <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
 <script type="text/javascript" src="plugins/bootstrap-fullscreen-select/js/bootstrap-fullscreen-select.js"></script>
-<!--END BOOTSTRAP-FULLSCREEN-SELECT files-->  
 <script>
 	$('.mobileSelect').mobileSelect();
 </script>
@@ -714,6 +718,7 @@
     });
   });
 </script>
+
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 

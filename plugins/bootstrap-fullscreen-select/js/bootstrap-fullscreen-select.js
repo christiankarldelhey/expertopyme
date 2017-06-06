@@ -187,7 +187,7 @@ if (typeof jQuery === 'undefined') {
                     d = this.$e.attr('data-selected');
 
                 if (b === null && c === undefined) {
-                    a.html("- Seleccione -");
+                    a.html("Nothing selected");
                     return false;
                 }
                 if (b === null) {
@@ -201,7 +201,7 @@ if (typeof jQuery === 'undefined') {
                         a.html(b);
                     } else {
                         if(d === undefined){
-                            a.html(b.length + ' items seleccionados');
+                            a.html(b.length + ' items selected');
                         }else{
                             a.html(b.length + ' ' + d);
                         }
@@ -423,10 +423,10 @@ if (typeof jQuery === 'undefined') {
      */
     $.fn.mobileSelect.defaults = {
         template: '<div><div class="mobileSelect-title"></div><div class="list-container"></div><div class="mobileSelect-buttons"><a href="#" class="mobileSelect-savebtn"></a><a href="#" class="mobileSelect-clearbtn"></a><a href="#" class="mobileSelect-cancelbtn"></a></div></div>',
-        title: 'Seleccione una opci&oacute;n',
-        buttonSave: 'Seleccionar',
-        buttonClear: 'Borrar',
-        buttonCancel: 'Cancelar',
+        title: 'Select an option',
+        buttonSave: 'Save',
+        buttonClear: 'Clear',
+        buttonCancel: 'Cancel',
         padding: {
             'top': '20px',
             'left': '20px',
