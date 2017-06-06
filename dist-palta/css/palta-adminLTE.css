@@ -1,5 +1,64 @@
 
+/* ESTILOS GENERALES */
+
+.bg-none {
+  background:none;
+}
+
+/* texto con icono */
+.text-with-icon i{
+  padding-top: 2px;
+  float: left;
+}
+.text-with-icon h4{
+  padding-left: 20px;
+}
+
+
+/* BOTON AGREGAR NUEVO - FA */
+
+.btn .fa.fa-lg{
+  line-height: 1em;
+  font-size: 1.7em;
+}
+
+/* BOTON CONTORNO */
+
+.btn-contorno {
+  background-color: white;
+  color: #0695D6;
+  padding: 12px 25px;
+  text-transform: capitalize;
+  font-weight: bold;
+  border: 2px solid #0695D6;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+}
+
+.btn-contorno:hover {
+  border:2px solid #3c8dbc !important;
+  color: #3c8dbc;
+}
+
+
 /* FORM-AZUL */
+
+
+.form-azul select, input {
+  border-radius: 4px !important;
+}
+
+.panel-heading {
+  min-height:auto !important;
+}
+
+.form-group textarea.form-control{
+  font-size: 20px;
+  font-weight: 400;
+  height: 180px;
+  padding: 10px 20px;
+}
 
 /* implemento boton de select 
 .form-azul select.borrar-select {
@@ -18,18 +77,11 @@
   font-size: 20px;
 }*/
 
-.form-azul select, input {
-  border-radius: 4px !important;
-}
 
-.panel-heading {
-  min-height:auto !important;
-}
-
-/* MEDIA QUERIES */
-
+/*TABLA*/
 
 /*ProgressBar en Tabla*/
+
 .progress-bar, .progress{
   height: 0.5rem;
 }
@@ -44,62 +96,24 @@
   border-bottom: none;
 }
 
-.text-with-icon i{
-  padding-top: 2px;
-  float: left;
-}
-.text-with-icon h4{
-  padding-left: 20px;
-}
-.btn .fa.fa-lg{
-  line-height: 1em;
-  font-size: 1.7em;
-}
-.form-group textarea.form-control{
-  font-size: 20px;
-  font-weight: 400;
-  height: 180px;
-  padding: 10px 20px;
-}
-
-.bg-none {
-	background:none;
-}
-
-.btn-contorno {
-	background-color: white;
-	color: #0695D6;
-	padding: 12px 25px;
-	text-transform: capitalize;
-	font-weight: bold;
-	
-	border: 2px solid #0695D6;
-	
-	border-radius: 4px 4px 4px 4px;
-	-moz-border-radius: 4px 4px 4px 4px;
-	-webkit-border-radius: 4px 4px 4px 4px;
-}
-
-.btn-contorno:hover {
-	border:2px solid #3c8dbc !important;
-	color: #3c8dbc;
-}
-
 .box-body .table-responsive {
-	padding:20px;
+  padding:20px;
 }
 
 .table-responsive tr:nth-child(1) td {
-	border-top: none;
+  border-top: none;
 }
 
-.bottom-bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+/* BAR ABAJO  
+ .bottom-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 	clear:both;
-}
+} */
 
+
+/* SECCIÓN BOTONERA */
 
 .section-botonera {
   padding-bottom: 60px;
@@ -115,10 +129,7 @@
 }
 
 
-.mobileSelect-container {
-	width: 40%;
-	margin: 0 30%;
-}	
+
 
 
 @media screen and (max-width: 767px) {
@@ -152,6 +163,12 @@
     padding: 10px;
     font-size: 15px;
 }
+
+
+.mobileSelect-container {
+  width: 40%;
+  margin: 0 30%;
+} 
 
 
 
