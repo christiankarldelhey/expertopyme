@@ -184,10 +184,11 @@ if (typeof jQuery === 'undefined') {
                 var a = this.$triggerElement.find('.text'),
                     b = this.$triggerElement.next().find('option:selected').text() || this.$e.val(), 
                     c = this.$e.attr('data-btntitle'),
-                    d = this.$e.attr('data-selected');
-
+                    d = this.$e.attr('data-selected'),
+					e = this.$triggerElement.next().find('option:selected');
+					
                 if (b === null && c === undefined) {
-                    a.html("Nothing selected");
+                    a.html("- Seleccione -");
                     return false;
                 }
                 if (b === null) {
@@ -195,15 +196,14 @@ if (typeof jQuery === 'undefined') {
                     return false;
                 }
 
-
                 if (this.isMultiple) {
                     if (b.length === 1) {
                         a.html(b);
                     } else {
                         if(d === undefined){
-                            a.html(b.length + ' items selected');
+                            a.html(e.length + ' opciones seleccionadas');
                         }else{
-                            a.html(b.length + ' ' + d);
+                            a.html(e.length + ' ' + e);
                         }
                     }
                 } else {
@@ -423,10 +423,10 @@ if (typeof jQuery === 'undefined') {
      */
     $.fn.mobileSelect.defaults = {
         template: '<div><div class="mobileSelect-title"></div><div class="list-container"></div><div class="mobileSelect-buttons"><a href="#" class="mobileSelect-savebtn"></a><a href="#" class="mobileSelect-clearbtn"></a><a href="#" class="mobileSelect-cancelbtn"></a></div></div>',
-        title: 'Select an option',
-        buttonSave: 'Save',
-        buttonClear: 'Clear',
-        buttonCancel: 'Cancel',
+        title: 'Seleccione su(s) opci&oacute;n(es)',
+        buttonSave: 'Seleccionar',
+        buttonClear: 'Borrar',
+        buttonCancel: 'Cancelar',
         padding: {
             'top': '20px',
             'left': '20px',
