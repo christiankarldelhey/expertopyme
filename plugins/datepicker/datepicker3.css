@@ -110,12 +110,14 @@
 }
 .datepicker table tr td.day:hover,
 .datepicker table tr td.day.focused {
-  background: rgba(0,0,0,0.2);
+  /*background: rgba(0,0,0,0.5);*/
+  background: #0695d6;
+  color: #ffffff;
   cursor: pointer;
 }
 .datepicker table tr td.old,
 .datepicker table tr td.new {
-  color: #777;
+  color: #ddd;
 }
 .datepicker table tr td.disabled,
 .datepicker table tr td.disabled:hover {
@@ -718,6 +720,9 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
 .datepicker thead tr:first-child th:hover,
 .datepicker tfoot tr th:hover {
   background: rgba(0,0,0,0.2);
+  
+  background: #0695d6;
+  color: #ffffff;  
 }
 .datepicker .cw {
   font-size: 10px;

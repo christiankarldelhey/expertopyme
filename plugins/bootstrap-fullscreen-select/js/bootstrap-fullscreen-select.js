@@ -187,7 +187,7 @@ if (typeof jQuery === 'undefined') {
                     d = this.$e.attr('data-selected');
 
                 if (b === null && c === undefined) {
-                    a.html("Nothing selected");
+                    a.html("- Seleccione -");
                     return false;
                 }
                 if (b === null) {
@@ -201,7 +201,7 @@ if (typeof jQuery === 'undefined') {
                         a.html(b);
                     } else {
                         if(d === undefined){
-                            a.html(b.length + ' items selected');
+                            a.html(b.length + ' items seleccionados');
                         }else{
                             a.html(b.length + ' ' + d);
                         }

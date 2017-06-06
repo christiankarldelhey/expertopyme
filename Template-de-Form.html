@@ -32,7 +32,6 @@
     
     <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
     <link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
-    <!--END BOOTSTRAP-FULLSCREEN-SELECT files-->  
 
   <!-- BOOTSTRAP-Datepicker -->
   <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
@@ -432,7 +431,8 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label class="control-label">Menú</label>
-                <select id="menu" class="form-control mobileSelect" data-style="info">
+                <!--
+                <select class="form-control mobileSelect" data-style="info">
                     <optgroup label="Al plato">
                         <option value="ravioles" >Ravioles</option>
                         <option value="lentejas">Lentejas</option>
@@ -443,6 +443,13 @@
                         <option value="tacos">Tacos</option>
                     </optgroup>
                 </select>
+                -->
+                <select class="form-control mobileSelect" >
+                    <option value="pizza">Pizza</option>
+                    <option value="burger">Burger</option>
+                    <option value="tacos">Tacos</option>
+                    <option value="garlic-bread">Garlic Bread</option>
+                </select>                
             </div>        
         </div>
         
@@ -470,7 +477,8 @@
         <div class="col-md-5">
             <div class="form-group">
                 <label class="control-label">Menú</label>
-                <select class="form-control mobileSelect" multiple id="selectmultiple" multiple data-style="info">
+                <select class="form-control mobileSelect" multiple data-style="info">
+                
                     <optgroup label="Plato principal">
                         <option value="ravioles" >Ravioles</option>
                         <option value="lentejas">Lentejas</option>
@@ -639,7 +647,10 @@
 <script src="plugins/datepicker/locales/bootstrap-datepicker.es.js"></script>
 <script type="application/javascript">
 	$('input.dateinput').datepicker({
-		language: "es"
+		language: "es",
+		autoclose: true,
+		clearBtn: true,
+		orientation: "top"
 	});
 </script>
 
@@ -655,8 +666,7 @@
 <script type="text/javascript" src="plugins/bootstrap-fullscreen-select/js/bootstrap-fullscreen-select.js"></script>
 <!--END BOOTSTRAP-FULLSCREEN-SELECT files-->  
 <script>
-	$('#menu').mobileSelect();
-	$('#selectmultiple').mobileSelect();
+	$('.mobileSelect').mobileSelect();
 </script>
 
 <script>
