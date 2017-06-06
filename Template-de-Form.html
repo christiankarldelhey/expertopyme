@@ -16,12 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
 
-    <!--
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/github.css">
-    <link rel="stylesheet" href="assets/app.css">
-    -->
-    
-  <!-- Theme style -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="plugins/jasny-bootstrap/css/jasny-bootstrap.css">
 
   <!-- ADMIN-LTE dist -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
@@ -29,15 +25,17 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
 
-
     <!-- BOOTSTRAP-Tags Input files -->
     <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
     <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/examples/assets/app.css">
-  
-  
-        <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
-        <link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
-        <!--END BOOTSTRAP-FULLSCREEN-SELECT files-->  
+    
+    
+    <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
+    <!--END BOOTSTRAP-FULLSCREEN-SELECT files-->  
+
+  <!-- BOOTSTRAP-Datepicker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
   
   <!-- PALTA dist-palta -->
   <link rel="stylesheet" href="dist-palta/css/poncho.min.css">
@@ -434,7 +432,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label class="control-label">Menú</label>
-                <select id="menu" class="form-control mobileSelect">
+                <select id="menu" class="form-control mobileSelect" data-style="info">
                     <optgroup label="Al plato">
                         <option value="ravioles" >Ravioles</option>
                         <option value="lentejas">Lentejas</option>
@@ -451,35 +449,80 @@
         <div class="col-md-2">
             <div class="form-group">
                 <label class="control-label">Código de Área</label>
-                <input class="form-control " type="text" name="" value="">
+                <input type="text" class="form-control" data-mask="9999">
             </div>
         </div>
         
         <div class="col-md-4">
             <div class="form-group">
                 <label class="control-label">Teléfono</label>
-                <input class="form-control " type="text" name="" value="">
+                <input type="text" class="form-control" data-mask="9999-9999-9999">
             </div>
         </div>
-        
-        <div class="col-md-6">
+
+        <div class="col-md-4">
             <div class="form-group">
-                <label class="control-label">Email</label>
-                <input class="form-control " type="text" name="" value="">
+                <label class="control-label">Teléfono Movil</label>
+                <input type="text" class="form-control" data-mask="99-9999-9999">
             </div>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-5">
+            <div class="form-group">
+                <label class="control-label">Menú</label>
+                <select class="form-control mobileSelect" multiple id="selectmultiple" multiple data-style="info">
+                    <optgroup label="Plato principal">
+                        <option value="ravioles" >Ravioles</option>
+                        <option value="lentejas">Lentejas</option>
+                    </optgroup>
+                    <optgroup label="Bebida">
+                        <option value="agua">Agua</option>
+                        <option value="vino">Vino</option>
+                        <option value="gasceosa">Gasceosa</option>
+                    </optgroup>
+                    <optgroup label="Postre">
+                        <option value="helado">Helado</option>
+                        <option value="flan">Flan</option>
+                        <option value="cafe">Cafe</option>
+                    </optgroup>                    
+                </select>
+            </div>        
+        </div>
+        
+        <div class="col-md-3">
             <div class="form-group">
                 <label class="control-label">Fecha de Nacimiento</label>
                 <div class="input-group">
-                    <input type="text" class="form-control pull-right" id="reservation">
+                    <input type="text" id="dateinput" name="dateinput" class="form-control pull-right dateinput">
                     <div class="input-group-addon bg-primary p-l-2 p-r-2">
-                        <i class="fa fa-calendar"></i> </div>
+                        <i class="fa fa-calendar"></i>
+                    </div>
                 </div>
                 <!-- /.input group -->
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label">CUIT/CUIL</label>
+                <input type="text" class="form-control" data-mask="99-99999999-9">
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <label class="control-label" for="txtxxx">Está de acuerdo? <span class="requiredField">*</span></label>
+            <div class="btn-group btn-group-justified" data-toggle="buttons">
+              <label href="#" class="btn btn-default">
+              <input class="text-center" type="radio" name="yesNo" id="si" value="si" data-fv-field="yesNo">Si
+                </label>
+              <label href="#" class="btn btn-default">
+              <input type="radio" name="yesNo" id="no" value="no" class="hidden" checked="" data-fv-field="yesNo">No
+                </label>
+              <label href="#" class="btn btn-default">
+              <input type="radio" name="yesNo" id="nsnc" value="nsnc" class="hidden" checked="" data-fv-field="yesNo">NS/NC
+                </label>                
+            </div>
+        </div>        
         
         <div class="col-md-12">
             <div class="form-group">
@@ -572,24 +615,38 @@
     </div>
 </footer>
 
-
 <!-- jQuery 2.2.3 -->
 <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
+
 <!-- Slimscroll -->
 <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="plugins/fastclick/fastclick.js"></script>
+
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
+
 <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
+
+<!-- Form Bootstrap Mask Latest compiled and minified JavaScript -->
+<script src="plugins/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+
+<!-- Datepicker -->
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="plugins/datepicker/locales/bootstrap-datepicker.es.js"></script>
+<script type="application/javascript">
+	$('input.dateinput').datepicker({
+		language: "es"
+	});
+</script>
+
 <!-- Page Script -->
 
 
 <!-- TagsInput -->
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script src="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.js"></script>
 <script src="plugins/bootstrap-tagsinput-latest/examples/assets/app.js"></script>
@@ -599,6 +656,7 @@
 <!--END BOOTSTRAP-FULLSCREEN-SELECT files-->  
 <script>
 	$('#menu').mobileSelect();
+	$('#selectmultiple').mobileSelect();
 </script>
 
 <script>
