@@ -172,6 +172,12 @@
 
 
 
+.panel.panel-default .panel-heading {
+    min-height: 180px;
+}
+
+
+
 .navbar { 
 	border-radius:0
 }

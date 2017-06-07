@@ -14,10 +14,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- fullCalendar 2.2.5-->
-  <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
-  <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
-  <!-- Theme style -->
 
   <!-- ADMIN-LTE dist -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
@@ -73,51 +69,11 @@
                 </a>              
               </li>
               -->
-              <li class="dropdown notifications-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-envelope-o"></i>
-                  <span class="label label-success">4</span>            </a>
-                <ul class="dropdown-menu">
-                  <li class="header">You have 10 notifications</li>
-                  <li>
-                    <ul class="menu">
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                          page and may cause design problems
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-users text-red"></i> 5 new members joined
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-user text-red"></i> You changed your username
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="footer"><a href="#">View all</a></li>
-                </ul>
-              </li>
-              
               <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-bell-o"></i>
-                  <span class="label label-warning">10</span>
-                </a>              
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="label label-success">4</span>
+                </a>
                 <ul class="dropdown-menu">
                   <li class="header">You have 4 messages</li>
                   <li>
@@ -187,11 +143,52 @@
                   <li class="footer"><a href="#">See All Messages</a></li>
                 </ul>
               </li>
+
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">10</span>
+                </a>       
+                <ul class="dropdown-menu">
+                  <li class="header">You have 10 notifications</li>
+                  <li>
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                          page and may cause design problems
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-red"></i> 5 new members joined
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-user text-red"></i> You changed your username
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">View all</a></li>
+                </ul>
+              </li>
               
               <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle bg-primary" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <span class="hidden-xs">Alexander Pierce</span>
-                  <i class="fa fa-user navIco" style="color:#FFFFFF;"></i>
+                  <i class="fa fa-user navIco"></i>
                 </a>
                 <ul class="dropdown-menu" style="width:100%;">
                   <li class="user-header bg-white">
@@ -224,39 +221,11 @@
     </nav>
   </header>
 
+
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
-      <!-- Sidebar user panel -->
-      <!--
-      <ul class="sidebar-menu">
-      <li>
-      <div class="user-panel">
-        <div class="pull-left image" align="center">
-          <i class="fa fa-user navIco" style="color:#FFFFFF; margin-left:10px;"></i>
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-      </li>
-      </ul>
-      -->
-      
-      <!-- search form -->
-      <!--
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      -->
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu side-bar-margin">
@@ -380,6 +349,7 @@
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
           </ul>
         </li>
+
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -391,10 +361,10 @@
     <section class="content-header container"><!-- se cambió container por content-header -->
       <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
-        <li class="active">Templates de Panels</li>
+        <li class="active">Templates de Elementos</li>
       </ol>
       <h1>
-        Panels
+        Elementos
       </h1>
 
     </section>    
@@ -404,217 +374,131 @@
     <section class="container"><!-- se cambió container por content!!! -->
         <div class="row">
             <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        Ejemplo de panel básico
-                    </div>
-                </div>
-                <a class="panel panel-default" href="#">
-                    <div class="panel-body">
-                        <h3>Este es el título del link</h3>
-                    </div>
-                </a>
-                <a class="panel panel-default" href="#">
-                    <div class="panel-body">
-                        <h3>Ministerio de Economía</h3>
-                        <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                    </div>
-                </a>
+                <h2>Listas</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <h4>Lista desordenada</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit <strong>amet</strong>.</li>
+                    <li>Consectetur adipiscing elit <strong>lorem ipsum dolor sit</strong>.</li>
+                    <li>Lorem ipsum dolor sit <strong>amet</strong>.</li>
+                    <li>Consectetur adipiscing elit <strong>lorem ipsum dolor sit</strong>.</li>
+                    <li>Lorem ipsum dolor sit <strong>amet</strong>.</li>
+                    <li>Consectetur adipiscing elit <strong>lorem ipsum dolor sit</strong>.</li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <h4>Lista ordenada</h4>
+                <ol>
+                    <li>Lorem ipsum dolor sit <strong>amet</strong>.</li>
+                    <li>Consectetur adipiscing elit <strong>lorem ipsum dolor sit</strong>.</li>
+                    <li>Lorem ipsum dolor sit <strong>amet</strong>.</li>
+                    <li>Consectetur adipiscing elit <strong>lorem ipsum dolor sit</strong>.</li>
+                    <li>Lorem ipsum dolor sit <strong>amet</strong>.</li>
+                    <li>Consectetur adipiscing elit <strong>lorem ipsum dolor sit</strong>.</li>
+                </ol>
             </div>
         </div>
         
         <div class="row">
             <div class="col-md-12">
-                <div class="row panels-row">
-                    <div class="col-xs-12 col-sm-4">
-                        <a class="panel panel-default bg-success" href="#">
-                            <div class="panel-body" style="margin-top: 8px;">
-                                <div class="media aligner">
-                                    <div class="media-left">
-                                        <i class="fa fa-plus-square-o fa-fw fa-3x"></i>
-                                    </div>
-                                    <div class="media-body">
-                                        <h3>Añadir empresa</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <a class="panel panel-default bg-success" href="#">
-                            <div class="panel-body">
-                                <div class="media aligner">
-                                    <div class="media-left">
-                                        <i class="fa fa-flask fa-fw fa-3x"></i>
-                                    </div>
-                                    <div class="media-body">
-                                        <h3>Incluir Incubadora</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <a class="panel panel-default bg-success" href="#">
-                            <div class="panel-body">
-                                <div class="media aligner">
-                                    <div class="media-left">
-                                        <i class="fa fa-book fa-fw fa-3x"></i>
-                                    </div>
-                                    <div class="media-body">
-                                        <h3>Ver todos los programas</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                <h2>Botones</h2>
+                <button type="button" class="btn btn-default">Default</button>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info disabled">Disabled</button>
+                <button type="button" class="btn btn-info disabled state-loading">Cargando</button>
+            </div>
         
+            <div class="col-md-12">
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-link">Link</button>
+                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-map-marker"></span> Button con ícono</button>
+            </div>
+        
+            <div class="col-md-12">
+                <h4>Tamaños de Botones</h4>
+                <button type="button" class="btn btn-primary btn-lg">Button Primary lg</button>
+                <button type="button" class="btn btn-default btn-lg">Button Default lg</button>
+                <button type="button" class="btn btn-primary">Button Primary</button>
+                <button type="button" class="btn btn-default">Button Default</button>
+                <button type="button" class="btn btn-primary btn-sm">Button Primary sm</button>
+                <button type="button" class="btn btn-default btn-sm">Button Default sm</button>
+                <button type="button" class="btn btn-primary btn-xs">Button Primary xs</button>
+                <button type="button" class="btn btn-default btn-xs">Button Default sm</button>
+            </div>
+        
+            <div class="col-md-12">
+                <h4>Botón con desplegable</h4>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Default <span class="caret"></span>
+                    </button>
+        
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a>
+                        </li>
+                        <li><a href="#">Another action</a>
+                        </li>
+                        <li><a href="#">Something else here</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- /.col -->
         </div>
-        <!-- /.row -->
-        
-        <div class="row panels-row">
-            <div class="col-xs-12 col-sm-4">
-                <div class="panel panel-default panel-icon">
-                    <div class="panel-heading"><i class="fa fa-clock-o"></i>
-                    </div>
-                    <div class="panel-body">
-                        <h3>Pac Emprendedor</h3>
-                        <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                        <div class="m-t-1" align="center">
-                            <a href="#" class="btn btn-primary btn-block">Aplicar</a>
-                            <a href="#">Más información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <div class="panel panel-default panel-icon">
-                    <div class="panel-heading"><i class="fa fa-archive"></i>
-                    </div>
-                    <div class="panel-body">
-                        <h3>Fondse</h3>
-                        <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                        <div class="m-t-1" align="center">
-                            <a href="#" class="btn btn-primary btn-block">Aplicar</a>
-                            <a href="#">Más información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4">
-                <div class="panel panel-default panel-icon">
-                    <div class="panel-heading"><i class="fa fa-book"></i>
-                    </div>
-                    <div class="panel-body">
-                        <h3>Academia</h3>
-                        <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                        <div class="m-t-1" align="center">
-                            <a href="#" class="btn btn-primary btn-block">Aplicar</a>
-                            <a href="#">Más información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row panels-row">
-            <div class="col-md-12" align="center">
-                <div class="panel panel-default">
-        
-                    <div class="panel-heading bg-primary text-white text-left">
-                        <h4>Capacitación PYME: Cadenas de valor
-                            <div class="pull-right">
-                                <p>Codigo de Identificación DSVE</p>
-                            </div>                
-                        </h4>
-                    </div>
-        
-                    <div class="panel-body text-left">
-                        <h2>Flowics</h2>
-                        <p>Unidad Capacitadora: <span><a href="#">Univ. San Andres</a></span> | Inicio: <span>11/12/2017</span> | Estado: <span>En Progreso</span>
-                        </p>
-        
-                        <div class="progress m-t-2">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
-                                <span class="sr-only">10% Completado</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         
-        <div class="row panels-row">
+        <div class="row">
             <div class="col-md-12">
-                <div class="panel panel-default">
-        
-                    <div class="panel-heading bg-primary text-white text-left">
-                        <h4> Fondo Semilla
-                            <div class="pull-right">
-                                <p>Codigo de Identificación DSVE</p>
-                            </div>                
-                        </h4>
+                <h2>Barra de progreso</h2>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <span class="sr-only">60% Completado</span>
                     </div>
+                </div>
         
-                    <div class="panel-body">
-                        <div class="col-md-10 col-sm-8 text-left">
-                            <h2>Marketing en Redes Sociales</h2>
-                            <p>Incubadora: <span><a href="#">Yo te incubo</a></span> | Inicio: <span>11/12/2017</span> | Estado: <span class="text-warning">Iniciado</span>
-                            </p>
-                            <div class="progress m-t-2">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
-                                    <span class="sr-only"></span>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="col-md-2 col-sm-4" align="center">
-                            <button class="btn btn-contorno m-t-2">Ver Más</button>
-                        </div>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                        <span class="sr-only">30% Completado</span>
                     </div>
+                </div>
         
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                        <span class="sr-only">45% Completado</span>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="row panels-row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a class="panel panel-default panel-icon" href="#">
-                    <div class="panel-heading"><i class="fa fa-file"></i>
-                    </div>
-                    <div class="panel-body">
-                        <h3>Ministerio de Economía</h3>
-                        <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                    </div>
-                </a>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Etiquetas</h2>
+                <span class="label label-default">Default</span>
+                <span class="label label-primary">Primary</span>
+                <span class="label label-success">Success</span>
+                <span class="label label-info">Info</span>
+                <span class="label label-warning">Warning</span>
+                <span class="label label-danger">Danger</span>
             </div>
-        
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a class="panel panel-default" href="#">
-                    <div style="background-image:url('https://argob.github.io/poncho/docs/img/placeholder.png'); height:180px;" class="panel-heading"></div>
-                    <div class="panel-body">
-                        <h3>Este es el título del link</h3>
-                    </div>
-                </a>
-            </div>
-        
-        
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a class="panel panel-default panel-md" href="#">
-                    <div style="background-image:url('https://argob.github.io/poncho/docs/img/placeholder.png'); height:180px;" class="panel-heading"></div>
-                    <div class="panel-body">
-                        <time>Jueves 14 de Enero del 2016</time>
-                        <h4>El Ministro Buryaile asistió a la apertura de la Semana Verde Internacional, en Berlín</h4>
-                    </div>
-                </a>
-            </div>
-        
         </div>
-    
+        
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Nota de ayuda sobre elemento</h2>
+                <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="left" title="Nota a la izquierda">Nota a la izquierda</button>
+                <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Nota superior">Nota superior</button>
+                <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Nota inferior">Nota inferior</button>
+                <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="right" title="Nota a la derecha">Nota a la derecha</button>
+            </div>
+        </div>
+        <!-- /.row -->
     </section>
     <!-- /.content -->
   </div>
