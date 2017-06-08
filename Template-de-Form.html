@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>TEMPLATE</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>TEMPLATE</title>
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-  <!-- BOOTSTRAP -->
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
+<!-- BOOTSTRAP -->
+<!-- Bootstrap 3.3.6 -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<!-- iCheck -->
+<link href="plugins/iCheck/all.css" rel="stylesheet">
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="plugins/jasny-bootstrap/css/jasny-bootstrap.css">
 
-  <!-- ADMIN-LTE dist -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+<!-- ADMIN-LTE dist -->
+<link rel="stylesheet" href="dist/css/AdminLTE.css">
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+   folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="dist/css/skins/_all-skins.css">
 
-    <!-- BOOTSTRAP-Tags Input files -->
-    <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/examples/assets/app.css">
-    
-    
-    <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
-    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
+<!-- BOOTSTRAP-Tags Input files -->
+<link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
+<link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/examples/assets/app.css">
 
-  <!-- BOOTSTRAP-Choosen Autocomplete -->
-  <link rel="stylesheet" href="plugins/bootstrap-chosen-master/bootstrap-chosen.css">
+<!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+<link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
 
-  <!-- BOOTSTRAP-Datepicker -->
-  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
-  
-  <!-- PALTA dist-palta -->
-  <link rel="stylesheet" href="dist-palta/css/poncho.min.css">
-  <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="dist-palta/css/palta.css">
-  <link rel="stylesheet" href="dist-palta/css/palta-adminLTE.css">    
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+<!-- BOOTSTRAP-Choosen Autocomplete -->
+<link rel="stylesheet" href="plugins/bootstrap-chosen-master/bootstrap-chosen.css">
+
+<!-- BOOTSTRAP-Datepicker -->
+<link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+
+<!-- PALTA dist-palta -->
+<link rel="stylesheet" href="dist-palta/css/poncho.min.css">
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="dist-palta/css/palta.css">
+<link rel="stylesheet" href="dist-palta/css/palta-adminLTE.css">    
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
   
 </head>
 <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
@@ -716,7 +716,7 @@
                         </div>
                     </div>                        
                     
-                    <div class="col-md-6">
+                    <div class="col-md-6 m-b-0">
                         <div class="form-group">
                             <label class="control-label">País</label>
                             <select data-placeholder="Seleccione un país" class=" form-control chosen-select" multiple="" tabindex="-1" style="width:100%;">
@@ -966,7 +966,41 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
                         </div>
-                    </div>                    
+                    </div>      
+                    
+                    <div class="clearfix"></div>
+                    
+                    <div class="col-md-4">
+                        <!-- checkbox -->
+                        <label class="control-label">iCheck Checkbox</label>
+                        <div class="form-group">
+                            <label>
+                            <input type="checkbox" class="minimal" checked> Primaria
+                            </label>
+                            <label>
+                            <input type="checkbox" class="minimal"> Secundaria 
+                            </label>
+                            <label>
+                            <input type="checkbox" class="minimal"> Terciaria
+                            </label>
+                        </div>
+                    </div>           
+                    
+                    <div class="col-md-4">
+                        <!-- radio -->
+                        <label class="control-label">iCheck Radio</label>
+                        <div class="form-group">
+                            <label>
+                            <input type="radio" name="r1" class="minimal" checked> Si 
+                            </label>
+                            <label>
+                            <input type="radio" name="r1" class="minimal"> No 
+                            </label>
+                            <label>
+                            <input type="radio" name="r1" class="minimal"> NS/NC 
+                            </label>
+                        </div>
+                    </div>        
 
                     <div class="col-xs-12">
                         <div class="alert alert-info">
@@ -989,6 +1023,68 @@
                 </form>
             </div>            
             <!-- /.box-body -->
+            
+
+        <div class="box-header with-border bg-goscuro text-white">
+          <h3 class="box-title">Información académica</h3>
+        </div>
+            
+        <div class="panel-body">
+
+        
+            <div id="infoacademica">
+    
+                <div id="clonedInput1" class="clonedInput m-t-1">
+                    <div class="col-md-4">
+                        <label class="control-label" for="txtCategory">Institución <span class="requiredField">*</span></label>
+                        <input class="form-control" name="txtCategory[]" id="category1">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="control-label" for="txtSubCategory" class="">Título <span class="requiredField">*</span></label>
+                        <input class="form-control" name="txtSubCategory[]" id="subcategory1">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="control-label" for="txtxxx" class="control-label">Carrera <span class="requiredField">*</span></label>
+                        <div class="btn-group btn-group-justified" data-toggle="buttons">
+                          <label href="#" class="btn btn-default">
+                          <input  class="text-center" type="radio" name="yesNo" id="si" value="si" class="hidden" data-fv-field="yesNo">Completa
+                            </label>
+                          <label href="#" class="btn btn-default">
+                          <input type="radio" name="yesNo" id="no" value="no" class="hidden" checked="" data-fv-field="yesNo" class="text-center">En curso
+                            </label>
+                        </div>
+                    </div>                
+                    
+                    <div class="actions m-t-1 col-md-12">
+                        <button class="clone btn btn-primary"><i class="fa fa-plus-square-o"></i> Agregar nueva</button> 
+                        <button class="remove btn btn-default m-l-1">Borrar</button>
+                    </div>
+                </div>          
+    
+            </div>
+        
+            <div class="col-md-12 m-t-1">
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-arrow-circle-o-right fa-fw fa-4x"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>Importante!</h4>
+                            <p class="margin-0">Una vez enviados, los datos no se podrán volver a editar.</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            
+            <div class="text-center col-md-12 m-t-1 m-b-2" align="center">
+              <button class="btn btn-success">GUARDAR</button>
+            </div>
+
+		</div>            
+            
+            
           </div>
           <!-- /. box -->
         </div>
@@ -1056,7 +1152,7 @@
 <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
 
 <!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
+<!--<script src="plugins/fastclick/fastclick.js"></script>-->
 
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
@@ -1100,6 +1196,57 @@
 </script>
 
 <script>
+var regex = /^(.+?)(\d+)$/i;
+var cloneIndex = $(".clonedInput").length;
+
+function clone(){
+    $(this).parents(".clonedInput").clone()
+        .appendTo("#infoacademica")
+        .attr("id", "clonedInput" +  cloneIndex)
+        .find("*")
+        .each(function() {
+            var id = this.id || "";
+            var match = id.match(regex) || [];
+            if (match.length == 3) {
+                this.id = match[1] + (cloneIndex);
+            }
+        })
+        .on('click', 'button.clone', clone)
+        .on('click', 'button.remove', remove);
+    cloneIndex++;
+}
+function remove(){
+    $(this).parents(".clonedInput").remove();
+}
+$("button.clone").on("click", clone);
+
+$("button.remove").on("click", remove);
+</script>
+
+<script>
+//iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass: 'iradio_minimal-blue'
+    });
+    //Red color scheme for iCheck
+    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+      checkboxClass: 'icheckbox_minimal-red',
+      radioClass: 'iradio_minimal-red'
+    });
+    //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass: 'iradio_flat-green'
+    });
+
+    //Colorpicker
+    $(".my-colorpicker1").colorpicker();
+    //color picker with addon
+    $(".my-colorpicker2").colorpicker();
+
+
+
   $(function () {
     //Enable iCheck plugin for checkboxes
     //iCheck for checkbox and radio inputs
@@ -1146,7 +1293,7 @@
 </script>
 
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<!--<script src="dist/js/demo.js"></script>-->
 
 </body>
 </html>

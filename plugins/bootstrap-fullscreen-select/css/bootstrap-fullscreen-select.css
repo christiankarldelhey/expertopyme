@@ -12,6 +12,10 @@
 button.btn-mobileSelect-gen:not([class*=col-]):not([class*=form-control]):not(.input-group-btn):not(.btn-block) {
     width: 100%;
     margin-bottom: 0;
+    background: #fff;
+    height: 54px;
+    font-size: 18px;
+    border: solid 1px #ccc;	
 }
 .mobileSelect-container.white {
     background: none;
