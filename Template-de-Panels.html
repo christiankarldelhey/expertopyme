@@ -14,9 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- fullCalendar 2.2.5-->
-  <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
-  <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
+
   <!-- Theme style -->
 
   <!-- ADMIN-LTE dist -->
@@ -73,51 +71,11 @@
                 </a>              
               </li>
               -->
-              <li class="dropdown notifications-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-envelope-o"></i>
-                  <span class="label label-success">4</span>            </a>
-                <ul class="dropdown-menu">
-                  <li class="header">You have 10 notifications</li>
-                  <li>
-                    <ul class="menu">
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                          page and may cause design problems
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-users text-red"></i> 5 new members joined
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-user text-red"></i> You changed your username
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="footer"><a href="#">View all</a></li>
-                </ul>
-              </li>
-              
               <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-bell-o"></i>
-                  <span class="label label-warning">10</span>
-                </a>              
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="label label-success">4</span>
+                </a>
                 <ul class="dropdown-menu">
                   <li class="header">You have 4 messages</li>
                   <li>
@@ -187,11 +145,52 @@
                   <li class="footer"><a href="#">See All Messages</a></li>
                 </ul>
               </li>
+
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">10</span>
+                </a>       
+                <ul class="dropdown-menu">
+                  <li class="header">You have 10 notifications</li>
+                  <li>
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                          page and may cause design problems
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-users text-red"></i> 5 new members joined
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-user text-red"></i> You changed your username
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">View all</a></li>
+                </ul>
+              </li>
               
               <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle bg-primary" data-toggle="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <span class="hidden-xs">Alexander Pierce</span>
-                  <i class="fa fa-user navIco" style="color:#FFFFFF;"></i>
+                  <i class="fa fa-user navIco"></i>
                 </a>
                 <ul class="dropdown-menu" style="width:100%;">
                   <li class="user-header bg-white">
@@ -391,10 +390,10 @@
     <section class="content-header container"><!-- se cambió container por content-header -->
       <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
-        <li class="active">Templates de Panels</li>
+        <li class="active">Templates de Paneles y Atajos</li>
       </ol>
       <h1>
-        Panels
+        Paneles y Atajos
       </h1>
 
     </section>    
@@ -474,6 +473,42 @@
             <!-- /.col -->
         </div>
         <!-- /.row -->
+        
+        <div class="row panels-row">
+            <div class="col-xs-12 col-sm-6">
+                <a class="panel panel-default" href="#">
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left padding-20">
+                                <i class="fa fa-phone fa-fw fa-3x text-secondary"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3>El estado del estado</h3>
+                                <p class="text-muted">Diagnóstico de la Administración Pública Nacional en diciembre de 2015</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+            <div class="col-xs-12 col-sm-6">
+                <a class="panel panel-default" href="#">
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left padding-20">
+                                <i class="fa fa-phone fa-fw fa-3x text-success"></i>
+                            </div>
+                            <div class="media-body">
+                                <h3>El estado del estado</h3>
+                                <p class="text-muted">Diagnóstico de la Administración Pública Nacional en diciembre de 2015</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+                  
+        
         
         <div class="row panels-row">
             <div class="col-xs-12 col-sm-4">
@@ -611,6 +646,24 @@
                         <h4>El Ministro Buryaile asistió a la apertura de la Semana Verde Internacional, en Berlín</h4>
                     </div>
                 </a>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="panel panel-default panel-icon panel-primary margin-40 state-loading" href="#">
+                    <div class="panel-heading"><i class="fa fa-check-square-o"></i>
+                    </div>
+                    <div class="panel-body">
+                        <h2>¿Este es tu número de CUIT?</h2>
+                        <p class="h2"><strong>2222324252</strong>
+                        </p>
+                        <p>lo calculamos a partir de tus datos pero no siempre coincide</p>
+                        <p><a href="cuit-ingresado.html" class="btn btn-primary btn-block">Si, es mi número de cuit</a>
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="cuit-no-coincidente.html">Si no es tu número de cuit, ingresá el numero correcto</a>
+                    </div>
+                </div>
             </div>
         
         </div>
