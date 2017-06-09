@@ -164,20 +164,32 @@
     font-size: 15px;
 }
 
+.panel.panel-default .panel-heading {
+    min-height: 180px;
+}
+
+.navbar { 
+	border-radius:0
+}
 
 .mobileSelect-container {
   width: 40%;
   margin: 0 30%;
 } 
 
-
-
-.panel.panel-default .panel-heading {
-    min-height: 180px;
+/*--- Phone -----------------*/
+@media (max-width: 767px) {	
+	.mobileSelect-container {
+		width: 90% !important;
+		margin: 0 5%;
+	}
 }
 
-
-
-.navbar { 
-	border-radius:0
+/*--- Tablet -----------------*/
+@media (min-width: 768px) {
+	.mobileSelect-container {
+		width: 60% !important;
+		margin: 0 20%;
+	}
 }
+
