@@ -19,6 +19,23 @@
   <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
   <!-- Theme style -->
 
+  <!-- FORMULARIO -->
+  <!-- iCheck -->
+  <link href="plugins/iCheck/all.css" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="plugins/jasny-bootstrap/css/jasny-bootstrap.css">
+  <!-- BOOTSTRAP-Tags Input files -->
+  <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
+  <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/examples/assets/app.css">
+  <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+  <link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
+  <!-- BOOTSTRAP-Choosen Autocomplete -->
+  <link rel="stylesheet" href="plugins/bootstrap-chosen-master/bootstrap-chosen.css">
+  <!-- BOOTSTRAP-Datepicker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- date-range-picker -->
+  <link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet">
+
   <!-- ADMIN-LTE dist -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -483,6 +500,8 @@
 
           </div>
 
+          <div id="infoacademica">
+          <div id="clonedInput1" class="clonedInput m-t-1">
             <div class="table-item">
               <h3><b>Trabajos de asesoramiento técnico realizados.</b></h3>
               
@@ -492,17 +511,19 @@
                   <input class="form-control " type="text" name="" value="">
                 </div> 
               </div>
-
-
+          </div>
+          </div>
 
 
               <div class="text-with-icon m-t-1">
                 <i class="fa fa-exclamation-circle text-muted"></i>
                 <h4>Le informamos que en caso de declarar asesoramientos técnicos a empresas, a los fines de trabajar con mayor celeridad Ud. podrá adjuntar los certificados de las asesorías técnicas realizadas.</h4>
               </div>
-              <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
-
+              <div class="actions">
+              <button class="m-t-2 btn btn-primary btn clone"><i class="fa fa-plus-square-o fa-lg"></i> Agregar Nuevo</button>
+              </div>
             </div>
+
             <div class="table-item">
               <h4>Adjuntar los certificados de las asesorías declaradas (Archivo ZIP)</h4>
               <a href="#" class="m-t-2 btn btn-link btn"><strong>Seleccionar Archivo</strong></a>
@@ -583,16 +604,89 @@
 <!-- Slimscroll -->
 <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
+<!--<script src="plugins/fastclick/fastclick.js"></script>-->
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
+
+
+<!-- FORMULARIOS NUEVOS JS -->
 <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
-<!-- Page Script -->
-
-
-
+<!-- Form Bootstrap Mask Latest compiled and minified JavaScript -->
+<script src="plugins/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+<!-- Datepicker -->
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="plugins/datepicker/locales/bootstrap-datepicker.es.js"></script>
+<script type="application/javascript">
+  $('input.dateinput').datepicker({
+    language: "es",
+    autoclose: true,
+    clearBtn: true,
+    orientation: "top"
+  });
+</script>
+<!-- TagsInput -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.js"></script>
+<script src="plugins/bootstrap-tagsinput-latest/examples/assets/app.js"></script>
+<!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+<script type="text/javascript" src="plugins/bootstrap-fullscreen-select/js/bootstrap-fullscreen-select.js"></script>
 <script>
+  $('#menuSingle').mobileSelect();
+  $('#menuMultiple').mobileSelect();
+</script>
+<!-- Autocomplete -->
+<script src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
+<script>
+  $(function() {
+  $('.chosen-select').chosen();
+  $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
+  });
+</script>
+<!-- Clone informacion academica -->
+<script>
+var regex = /^(.+?)(\d+)$/i;
+var cloneIndex = $(".clonedInput").length;
+function clone(){
+    $(this).parents(".clonedInput").clone()
+        .appendTo("#infoacademica")
+        .attr("id", "clonedInput" +  cloneIndex)
+        .find("*")
+        .each(function() {
+            var id = this.id || "";
+            var match = id.match(regex) || [];
+            if (match.length == 3) {
+                this.id = match[1] + (cloneIndex);
+            }
+        })
+        .on('click', 'button.clone', clone)
+        .on('click', 'button.remove', remove);
+    cloneIndex++;
+}
+function remove(){
+    $(this).parents(".clonedInput").remove();
+}
+$("button.clone").on("click", clone);
+
+$("button.remove").on("click", remove);
+</script>
+<script>
+//iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass: 'iradio_minimal-blue'
+    });
+    //Red color scheme for iCheck
+    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+      checkboxClass: 'icheckbox_minimal-red',
+      radioClass: 'iradio_minimal-red'
+    });
+    //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass: 'iradio_flat-green'
+    });
+
   $(function () {
     //Enable iCheck plugin for checkboxes
     //iCheck for checkbox and radio inputs
@@ -637,8 +731,13 @@
     });
   });
 </script>
+
+
+
+
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<!--<script src="dist/js/demo.js"></script>-->
+
 
 </body>
 </html>

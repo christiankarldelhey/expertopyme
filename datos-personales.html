@@ -21,6 +21,23 @@
   <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
   <!-- Theme style -->
 
+    <!-- FORMULARIO -->
+  <!-- iCheck -->
+  <link href="plugins/iCheck/all.css" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="plugins/jasny-bootstrap/css/jasny-bootstrap.css">
+  <!-- BOOTSTRAP-Tags Input files -->
+  <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
+  <link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/examples/assets/app.css">
+  <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+  <link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
+  <!-- BOOTSTRAP-Choosen Autocomplete -->
+  <link rel="stylesheet" href="plugins/bootstrap-chosen-master/bootstrap-chosen.css">
+  <!-- BOOTSTRAP-Datepicker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- date-range-picker -->
+  <link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet">
+
 
   <!-- ADMIN-LTE dist -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
@@ -384,26 +401,26 @@
  <!-- FORM AZUL DATOS PERSONALES -->        
         <form class="form-azul">
             
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label class="control-label">CUIT/CUIL *</label>
-                  <select class="form-control borrar-select" name="">
-                    <option value="" hidden>Seleccionar</option>
-                    <option value="1" class="ignore">CUIT</option>
-                    <option value="2" class="ignore">CUIL</option>
-                  </select>
-                  <!-- <i class="fa fa-caret-down bg-primary text-center m-r-0"></i> -->
+            <div class="col-md-6 m-b-2">
+              <label class="control-label">CUIT/CUIL *</label>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                  <label href="#" class="btn btn-default active">
+                      <input  class="text-center" type="radio" name="gender" id="female" value="female" class="hidden" data-fv-field="gender"> CUIT
+                  </label>
+                  <label href="#" class="btn btn-default">
+                      <input type="radio" name="gender" id="male" value="male" class="hidden" checked="" data-fv-field="gender" class="text-center"> CUIL
+                  </label>
                 </div>
               </div>
 
-              <div class="col-md-3">
-                <div class="form-group">
-                  <label class="control-label">Número *</label>
-                  <input class="form-control " type="text"  name="" value="">
+              <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label">Número *</label>
+                <input type="text" class="form-control" data-mask="99-99999999-9">
                 </div>
               </div>
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="form-group">
                   <label class="control-label">Razón Social/Apellido y Nombre *</label>
                   <input class="form-control " type="text" name="" value="">
@@ -412,7 +429,7 @@
 
              
 
-              <div class="col-md-3 m-b-2">
+              <div class="col-md-6 m-b-2">
               <label class="control-label">Género *</label>
                 <div class="btn-group btn-group-justified" data-toggle="buttons">
                   <label href="#" class="btn btn-default active">
@@ -426,79 +443,141 @@
               
               <div class="clearfix"></div>
 
-              <div class="col-md-3">
+              <div class="col-md-6">
+              <div class="form-group">
                 <label class="control-label">Fecha de Nacimiento *</label>
-                <div class="form-group">
-                  
-                  <div class="input-group">
-                  <input type="text" class="form-control pull-right" id="reservation">
-                  <div class="input-group-addon bg-primary p-l-2 p-r-2">
-                      <i class="fa fa-calendar"></i>
-                    </div>
-                    
-                  </div><!-- /.input group -->
-                  
+                <div class="input-group">
+                <input type="text" id="dateinput" name="dateinput" class="form-control pull-right dateinput" data-mask="99/99/9999">
+                <div class="input-group-addon bg-primary p-l-2 p-r-2">
+                  <i class="fa fa-calendar"></i>
+                </div>
+                </div>
+                <!-- /.input group -->
                 </div>
               </div>                           
 
            
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="form-group">
                   <label class="control-label">Dirección (calle + nro.)</label>
                   <input class="form-control " type="text" name="" value="">
                 </div> 
             </div>
 
-              <div class="col-md-2">
+              <div class="col-md-6">
                 <div class="form-group">
                   <label class="control-label">Código de Área</label>
-                  <input class="form-control " type="text" name="" value="">
+                  <input type="text" class="form-control" data-mask="99?99">
                 </div>
               </div>
 
-              <div class="col-md-3">
+              <div class="col-md-6">
                 <div class="form-group">
                   <label class="control-label">Teléfono</label>
-                  <input class="form-control " type="text" name="" value="">
+                  <input type="text" class="form-control" data-mask="99999?99999">
+                </div>
+              </div> 
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Provincia *</label>
+                  <select data-placeholder="Seleccione una provincia" class="form-control chosen-select" tabindex="-1" style="width:100%;">
+                    <option value=""></option>
+                    <option value="Buenos Aires">Bs. As.</option>
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Chubut">Chubut</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Corrientes">Corrientes</option>
+                    <option value="Entre Rios">Entre Rios</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Rio Negro">Rio Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Luis">San Luis</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Sgo. del Estero">Sgo. del Estero</option>
+                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                    <option value="Tucuman">Tucuman</option>
+                  </select>
+                </div>
+              </div>                        
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Partido/Departamento *</label>
+                  <select data-placeholder="Seleccione un partido o departamento" class="form-control chosen-select" tabindex="-1" style="width:100%;">
+                    <option value=""></option>
+                    <option value="Buenos Aires">Bs. As.</option>
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Chubut">Chubut</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Corrientes">Corrientes</option>
+                    <option value="Entre Rios">Entre Rios</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Rio Negro">Rio Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Luis">San Luis</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Sgo. del Estero">Sgo. del Estero</option>
+                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                    <option value="Tucuman">Tucuman</option>
+                  </select>
+                </div>
+              </div>                        
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Localidad *</label>
+                  <select data-placeholder="Seleccione una localidad" class="form-control chosen-select" tabindex="-1" style="width:100%;">
+                    <option value=""></option>
+                    <option value="Buenos Aires">Bs. As.</option>
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Chubut">Chubut</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Corrientes">Corrientes</option>
+                    <option value="Entre Rios">Entre Rios</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Rio Negro">Rio Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Luis">San Luis</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Sgo. del Estero">Sgo. del Estero</option>
+                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                    <option value="Tucuman">Tucuman</option>
+                  </select>
                 </div>
               </div> 
 
 
-            <div class="col-md-3">
-                <div class="form-group">
-                  <label class="control-label">Provincia *</label>
-                  <select class="form-control borrar-select" name="">
-                    <option value="" hidden></option>
-                    <option value="1" class="ignore">CUIT</option>
-                    <option value="2" class="ignore">CUIL</option>
-                  </select>
-                  <!-- <i class="fa fa-caret-down bg-primary text-center m-r-0"></i> -->
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="form-group">
-                  <label class="control-label">Partido/Departamento *</label>
-                  <select class="form-control borrar-select" name="">
-                    <option value="" hidden></option>
-                    <option value="1" class="ignore">CUIT</option>
-                    <option value="2" class="ignore">CUIL</option>
-                  </select>
-                  <!-- <i class="fa fa-caret-down bg-primary text-center m-r-0"></i> -->
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="form-group">
-                  <label class="control-label">Localidad</label>
-                  <input class="form-control " type="text" name="" value="">
-                </div> 
-            </div>
-
-            
-
-              <div class=" col-md-2">
+              <div class=" col-md-6">
                 <div class="form-group">
                   <label class="control-label">C.P.</label>
                   <input class="form-control " type="text" name="" value="">
@@ -631,16 +710,89 @@
 <!-- Slimscroll -->
 <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
+<!--<script src="plugins/fastclick/fastclick.js"></script>-->
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
+
+
+<!-- FORMULARIOS NUEVOS JS -->
 <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
-<!-- Page Script -->
-
-
-
+<!-- Form Bootstrap Mask Latest compiled and minified JavaScript -->
+<script src="plugins/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+<!-- Datepicker -->
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="plugins/datepicker/locales/bootstrap-datepicker.es.js"></script>
+<script type="application/javascript">
+  $('input.dateinput').datepicker({
+    language: "es",
+    autoclose: true,
+    clearBtn: true,
+    orientation: "top"
+  });
+</script>
+<!-- TagsInput -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.js"></script>
+<script src="plugins/bootstrap-tagsinput-latest/examples/assets/app.js"></script>
+<!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+<script type="text/javascript" src="plugins/bootstrap-fullscreen-select/js/bootstrap-fullscreen-select.js"></script>
 <script>
+  $('#menuSingle').mobileSelect();
+  $('#menuMultiple').mobileSelect();
+</script>
+<!-- Autocomplete -->
+<script src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
+<script>
+  $(function() {
+  $('.chosen-select').chosen();
+  $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
+  });
+</script>
+<!-- Clone informacion academica -->
+<script>
+var regex = /^(.+?)(\d+)$/i;
+var cloneIndex = $(".clonedInput").length;
+function clone(){
+    $(this).parents(".clonedInput").clone()
+        .appendTo("#infoacademica")
+        .attr("id", "clonedInput" +  cloneIndex)
+        .find("*")
+        .each(function() {
+            var id = this.id || "";
+            var match = id.match(regex) || [];
+            if (match.length == 3) {
+                this.id = match[1] + (cloneIndex);
+            }
+        })
+        .on('click', 'button.clone', clone)
+        .on('click', 'button.remove', remove);
+    cloneIndex++;
+}
+function remove(){
+    $(this).parents(".clonedInput").remove();
+}
+$("button.clone").on("click", clone);
+
+$("button.remove").on("click", remove);
+</script>
+<script>
+//iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass: 'iradio_minimal-blue'
+    });
+    //Red color scheme for iCheck
+    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+      checkboxClass: 'icheckbox_minimal-red',
+      radioClass: 'iradio_minimal-red'
+    });
+    //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass: 'iradio_flat-green'
+    });
+
   $(function () {
     //Enable iCheck plugin for checkboxes
     //iCheck for checkbox and radio inputs
@@ -685,6 +837,7 @@
     });
   });
 </script>
+
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 </body>
