@@ -38,6 +38,8 @@
 
 <!-- BOOTSTRAP-Datepicker -->
 <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+<!-- date-range-picker -->
+<link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet">
 
 <!-- PALTA dist-palta -->
 <link rel="stylesheet" href="dist-palta/css/poncho.min.css">
@@ -429,7 +431,7 @@
                 <!-- FORM AZUL DATOS PERSONALES -->        
                 <form class="form-azul">
             
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label">Menú Single</label>
                             <select class="form-control mobileSelect" id="menuSingle" data-title="Seleccione su menú single"  data-style="default">
@@ -446,7 +448,7 @@
                         </div>        
                     </div>
                     
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <div class="form-group">
                             <label class="control-label">Código de Área</label>
                             <input type="text" class="form-control" data-mask="9999">
@@ -460,14 +462,14 @@
                         </div>
                     </div>
             
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <div class="form-group">
                             <label class="control-label">Teléfono Movil</label>
                             <input type="text" class="form-control" data-mask="99-9999-9999">
                         </div>
                     </div>
                     
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label">Menú Multiple</label>
                             <select class="form-control mobileSelect" multiple id="menuMultiple" 
@@ -512,6 +514,22 @@
                             <!-- /.input group -->
                         </div>
                     </div>
+                    
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Date:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control pull-right" id="reservation">
+                                <div class="input-group-addon bg-primary p-l-2 p-r-2">
+                                	<i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>                    
+
+                 
+                    
             
                     <div class="col-md-4">
                         <div class="form-group">
@@ -520,9 +538,9 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <label class="control-label" for="txtxxx">Está de acuerdo? <span class="requiredField">*</span></label>
-                        <div class="btn-group btn-group-justified" data-toggle="buttons">
+                        <div class="btn-group btn-group-justified m-b-2" data-toggle="buttons">
                           <label href="#" class="btn btn-default">
                           <input class="text-center" type="radio" name="yesNo" id="si" value="si" data-fv-field="yesNo">Si
                             </label>
@@ -544,7 +562,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label">País</label>
                             <select data-placeholder="Seleccione un país" class="form-control chosen-select" tabindex="-1" style="width:100%;">
@@ -716,7 +734,7 @@
                         </div>
                     </div>                        
                     
-                    <div class="col-md-6 m-b-0">
+                    <div class="col-md-12 m-b-2">
                         <div class="form-group">
                             <label class="control-label">País</label>
                             <select data-placeholder="Seleccione un país" class=" form-control chosen-select" multiple="" tabindex="-1" style="width:100%;">
@@ -968,9 +986,7 @@
                         </div>
                     </div>      
                     
-                    <div class="clearfix"></div>
-                    
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <!-- checkbox -->
                         <label class="control-label">iCheck Checkbox</label>
                         <div class="form-group">
@@ -986,7 +1002,7 @@
                         </div>
                     </div>           
                     
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <!-- radio -->
                         <label class="control-label">iCheck Radio</label>
                         <div class="form-group">
@@ -1001,6 +1017,13 @@
                             </label>
                         </div>
                     </div>        
+                    
+                    <div class="col-md-12" id="otros">
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                            <input id="" class="form-control" type="email" value="" />
+                        </div>
+                    </div>                        
 
                     <div class="col-xs-12">
                         <div class="alert alert-info">
@@ -1187,6 +1210,9 @@
 	$('#menuMultiple').mobileSelect();
 </script>
 
+
+
+
 <script src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
 <script>
   $(function() {
@@ -1291,6 +1317,8 @@ $("button.remove").on("click", remove);
     });
   });
 </script>
+
+
 
 <!-- AdminLTE for demo purposes -->
 <!--<script src="dist/js/demo.js"></script>-->
