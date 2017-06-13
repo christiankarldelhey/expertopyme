@@ -14,11 +14,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 <!-- Ionicons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+
+<!-- FORMULARIO -->
 <!-- iCheck -->
 <link href="plugins/iCheck/all.css" rel="stylesheet">
-
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="plugins/jasny-bootstrap/css/jasny-bootstrap.css">
+<!-- BOOTSTRAP-Tags Input files -->
+<link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
+<link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/examples/assets/app.css">
+<!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+<link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
+<!-- BOOTSTRAP-Choosen Autocomplete -->
+<link rel="stylesheet" href="plugins/bootstrap-chosen-master/bootstrap-chosen.css">
+<!-- BOOTSTRAP-Datepicker -->
+<link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+<!-- date-range-picker -->
+<link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet">
+
 
 <!-- ADMIN-LTE dist -->
 <link rel="stylesheet" href="dist/css/AdminLTE.css">
@@ -26,20 +40,6 @@
    folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
 
-<!-- BOOTSTRAP-Tags Input files -->
-<link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
-<link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/examples/assets/app.css">
-
-<!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
-<link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
-
-<!-- BOOTSTRAP-Choosen Autocomplete -->
-<link rel="stylesheet" href="plugins/bootstrap-chosen-master/bootstrap-chosen.css">
-
-<!-- BOOTSTRAP-Datepicker -->
-<link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
-<!-- date-range-picker -->
-<link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet">
 
 <!-- PALTA dist-palta -->
 <link rel="stylesheet" href="dist-palta/css/poncho.min.css">
@@ -1170,22 +1170,19 @@
 <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
-
 <!-- Slimscroll -->
 <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-
 <!-- FastClick -->
 <!--<script src="plugins/fastclick/fastclick.js"></script>-->
-
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
 
+
+<!-- FORMULARIOS NUEVOS JS -->
 <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
-
 <!-- Form Bootstrap Mask Latest compiled and minified JavaScript -->
 <script src="plugins/jasny-bootstrap/js/jasny-bootstrap.js"></script>
-
 <!-- Datepicker -->
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="plugins/datepicker/locales/bootstrap-datepicker.es.js"></script>
@@ -1197,22 +1194,17 @@
 		orientation: "top"
 	});
 </script>
-
 <!-- TagsInput -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script src="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.js"></script>
 <script src="plugins/bootstrap-tagsinput-latest/examples/assets/app.js"></script>
-
 <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
 <script type="text/javascript" src="plugins/bootstrap-fullscreen-select/js/bootstrap-fullscreen-select.js"></script>
 <script>
 	$('#menuSingle').mobileSelect();
 	$('#menuMultiple').mobileSelect();
 </script>
-
-
-
-
+<!-- Autocomplete -->
 <script src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
 <script>
   $(function() {
@@ -1220,11 +1212,10 @@
 	$('.chosen-select-deselect').chosen({ allow_single_deselect: true });
   });
 </script>
-
+<!-- Clone informacion academica -->
 <script>
 var regex = /^(.+?)(\d+)$/i;
 var cloneIndex = $(".clonedInput").length;
-
 function clone(){
     $(this).parents(".clonedInput").clone()
         .appendTo("#infoacademica")
@@ -1248,7 +1239,6 @@ $("button.clone").on("click", clone);
 
 $("button.remove").on("click", remove);
 </script>
-
 <script>
 //iCheck for checkbox and radio inputs
     $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
@@ -1265,13 +1255,6 @@ $("button.remove").on("click", remove);
       checkboxClass: 'icheckbox_flat-green',
       radioClass: 'iradio_flat-green'
     });
-
-    //Colorpicker
-    $(".my-colorpicker1").colorpicker();
-    //color picker with addon
-    $(".my-colorpicker2").colorpicker();
-
-
 
   $(function () {
     //Enable iCheck plugin for checkboxes
@@ -1317,6 +1300,7 @@ $("button.remove").on("click", remove);
     });
   });
 </script>
+
 
 
 
