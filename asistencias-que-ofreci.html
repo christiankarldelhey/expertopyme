@@ -476,17 +476,50 @@
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Acciones</a></li>
         <li><a href="#">Inscribirme como experto</a></li>
-        <li class="active">Experiencia laboral</li>
+        <li class="active">Asistencia que ofrecí</li>
       </ol>
 
       <h3 class="m-b-2">Inscribirme como experto PyME</h3>
 
+            
+        <div class="row panels-row">
+            <div class="col-md-12" align="center">
+                <div class="panel panel-default text-left">
+        
+                    <div class="panel-heading bg-primary text-white">
+                        <h4>Asistencias que ofrecí</h4>
+                    </div>
+        
+                    <div class="panel-body ">
+                      <div class="table-item">
+                        <div class="form-group m-b-0 text-left">
+                          <h4>Ha realizado trabajos de asesoramiento técnico?</h4>
+                          <div class="row">
+                            <div class="col-md-3">
+                              <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                <label href="#" class="btn btn-default active">
+                                <input  class="text-center" type="radio" name="yesNo" id="si" value="si" class="hidden" data-fv-field="yesNo">Si
+                                </label>
+                                    <label href="#" class="btn btn-default">
+                                    <input type="radio" name="yesNo" id="no" value="no" class="hidden" checked="" data-fv-field="yesNo" class="text-center">No
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>   
+        
         <div class="row panels-row">
             <div class="col-md-12">
                 <div class="panel panel-default">
         
                     <div class="panel-heading bg-primary text-white text-left">
-                        <h4>Experiencia Laboral en puestos de jefatura o superiores</h4>
+                        <h4>Trabajos de asesoramiento técnico realizados</h4>
                     </div>
         
                     <div class="panel-body ">
@@ -513,7 +546,7 @@
                                 </tbody>
                             </table>
                             <!-- /.table -->
-                            <button type="button" class="btn btn-primary pull-left m-t-2"><i class="fa fa-plus-square" aria-hidden="true"></i> Nueva experiencia</button>
+                            <button type="button" class="btn btn-primary pull-left m-t-2"><i class="fa fa-plus-square" aria-hidden="true"></i> Nuevo asesoramiento</button>
                         </div>
                     </div>
                 </div>
@@ -526,20 +559,13 @@
                 <div class="panel panel-default">
         
                     <div class="panel-heading bg-primary text-white text-left">
-                        <h4>Carga de experiencia laboral</h4>
+                        <h4>Carga de asesoramientos técnicos realizados</h4>
                     </div>
         
                     <div class="panel-body">
                         <!-- FORM AZUL DATOS PERSONALES -->        
                         <form class="form-azul">
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="control-label">Cargo</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>                          
-
+                          
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">Empresa</label>
@@ -547,8 +573,15 @@
                                 </div>
                             </div>
                 
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">CUIT</label>
+                                    <input type="text" class="form-control" data-mask="99-99999999-9">
+                                </div>
+                            </div>
+                
                             <div class="col-md-5">
-                                <label class="control-label" for="txtxxx">Trabaja aquí actualmente <span class="requiredField">*</span></label>
+                                <label class="control-label" for="txtxxx">Está de acuerdo? <span class="requiredField">*</span></label>
                                 <div class="btn-group btn-group-justified m-b-2" data-toggle="buttons">
                                   <label href="#" class="btn btn-default">
                                   <input class="text-center" type="radio" name="yesNo" id="si" value="si" data-fv-field="yesNo">Si
@@ -568,25 +601,20 @@
                                     <input type="text" id="fechaSimHasta" class="form-control" data-mask="99/99/9999">
                                 </div>                                         
                             </div>                    
-
-                            <div class="col-md-12">
+                    
+                            <div class="col-md-8">
                                 <div class="form-group">
-                                    <label class="control-label">Ejes</label>
-                                    <select class="form-control mobileSelect" multiple id="menuMultipleE" 
-                                        data-title="Seleccione dimensiones" 
-                                        data-btntext-save="Seleccionar" data-btntext-cancel="Salir" data-btntext-clear="Borrar"
-                                         data-style="default">
-                                        <option value="e1">Capital humano</option>
-                                        <option value="e2">Finanzas</option>
-                                        <option value="e3">Comercialización y comunicación</option>
-                                        <option value="e4">Estrategia, sistemas y métodos de organización</option>
-                                        <option value="e5">Procesos, calidad y organización industrial</option>                    
-                                        <option value="e6">Innovación, desarrollo y tecnología</option>
-                                        <option value="e7">Seguridad, higiene y medioambiente</option>
-                                        <option value="e8">Abastecimiento y logística</option>                                                
-                                    </select>
-                                </div>        
-                            </div> 
+                                    <label class="control-label">Trabajo realizado</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Cantidad de horas</label>
+                                    <input type="text" class="form-control" data-mask="9999">
+                                </div>
+                            </div>
                             
                             <div class="col-md-4">
                                 <div class="form-group m-b-0">
@@ -595,11 +623,185 @@
                                     <!--<input type="file" class="form-control" data-mask="9999">-->
                                 </div>
                             </div>    
-
                             
+                            <div class="col-md-12 m-t-2 m-b-2">
+                                <h4>Eje del expertice</h4>
+                                <p>Faucibus et molestie ac feugiat sed. Faucibus nisl tincidunt eget nullam. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Pellentesque eu tincidunt tortor aliquam nulla. In iaculis nunc sed augue lacus viverra. Diam sollicitudin tempor id eu nisl.</p>
+                            </div>                
+                            
+                            <div class="col-md-12">
+                                <div class="box-body border-gray bg-gray-light m-t-1">
+                                    <div class="form-group m-b-0 m-l-1 m-t-1">
+                                        <h3><input type="checkbox" class="checkichek" checked></label> Comercialización y comunicación <button type="button" class="btn btn-sm bg-none" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button></h3>
+                                    </div>                   
+                                  <div class="table-responsive padding-10">
+                    
+                                    <table class="table table-hover no-padding">
+                                      <tbody>
+                                      <tr>
+                                        <td width="5%" align="center"><i class="fa fa-file-text-o fa-1x text-muted"></i></td>
+                                        <td width="75%">
+                                            <p class="text-muted">Plan estratégico de corto y mediano plazo</p>
+                                        </td>
+                                        <td width="15%" align="center"><button type="button" class="btn btn-sm bg-none" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="fa fa-question fa-lg text-black" aria-hidden="true"></i></button></td>
+                                        <td width="5%" align="center"><button type="button" class="btn btn-sm bg-none"><i class="fa fa-times-circle text-danger fa-lg" aria-hidden="true"></i></button></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="5%" align="center"><i class="fa fa-file-text-o fa-1x text-muted"></i></td>
+                                        <td width="75%">
+                                            <p class="text-muted">Definición de roles y funciones</p>
+                                        </td>
+                                        <td width="15%" align="center"><button type="button" class="btn btn-sm bg-none" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="fa fa-question fa-lg text-black" aria-hidden="true"></i></button></td>
+                                        <td width="5%" align="center"><button type="button" class="btn btn-sm bg-none"><i class="fa fa-times-circle text-danger fa-lg" aria-hidden="true"></i></button></td>
+                                      </tr>                          
+                                      </tbody>
+                                    </table>
+                                    <!-- /.table -->
+                    
+                                    
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Dimensiones</label>
+                                            <select class="form-control mobileSelect" multiple id="menuMultipleC" 
+                                                data-title="Seleccione dimensiones" 
+                                                data-btntext-save="Seleccionar" data-btntext-cancel="Salir" data-btntext-clear="Borrar"
+                                                 data-style="default">
+                                                <option value="c1">Definición de roles y funciones</option>
+                                                <option value="c2">Plan estratégico de corto y mediano plazo</option>
+                                                <option value="c3">Mision y Visión</option>
+                                                <option value="c0">Otro</option>                    
+                                            </select>
+                                        </div>        
+                                    </div>                                    
+                    
+                                    <div class="col-md-12">
+                                        <div class="form-group m-b-0">
+                                          <div class="input-group">
+                                            <input class="form-control" type="text">
+                                            <span class="input-group-btn">
+                                              <button class="btn btn-primary" type="button">Agregar</button>
+                                            </span>
+                                          </div>
+                                        </div>
+                                    </div>
+                                 
+                                  </div>
+                    
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                            
+                            
+                            <div class="col-md-12">
+                                <div class="box-body border-gray bg-gray-light m-t-1">
+                                    <div class="form-group m-b-0 m-l-1 m-t-1">
+                                        <h3><input type="checkbox" class="checkichek" checked></label> Capital humano <button type="button" class="btn btn-sm bg-none" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button></h3>
+                                    </div>                   
+                                  <div class="table-responsive padding-10">
+                    
+                                    <table class="table table-hover">
+                                      <tbody>
+                                      <tr>
+                                        <td width="5%" align="center"><i class="fa fa-file-text-o fa-1x text-muted"></i></td>
+                                        <td width="75%">
+                                            <p class="text-muted">Selección de Personal</p>
+                                        </td>
+                                        <td width="15%" align="center"><button type="button" class="btn btn-sm bg-none" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="fa fa-question fa-lg text-black" aria-hidden="true"></i></button></td>
+                                        <td width="5%" align="center"><button type="button" class="btn btn-sm bg-none"><i class="fa fa-times-circle text-danger fa-lg" aria-hidden="true"></i></button></td>
+                                      </tr>
+                                      </tbody>
+                                    </table>
+                                    <!-- /.table -->
+                                    
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Dimensiones</label>
+                                            <select class="form-control mobileSelect" multiple id="menuMultipleA" 
+                                                data-title="Seleccione dimensiones" 
+                                                data-btntext-save="Seleccionar" data-btntext-cancel="Salir" data-btntext-clear="Borrar"
+                                                 data-style="default">
+                                                <option value="a1" >Seleccion de Personal</option>
+                                                <option value="a2">Capacitacion</option>
+                                                <option value="a3">Liderazgo</option>
+                                                <option value="a0">Otro</option>                    
+                                            </select>
+                                        </div>        
+                                    </div>                                    
+                    
+                                    <div class="col-md-12">
+                                        <div class="form-group m-b-0">
+                                          <div class="input-group">
+                                            <input class="form-control" type="text">
+                                            <span class="input-group-btn">
+                                              <button class="btn btn-primary" type="button">Agregar</button>
+                                            </span>
+                                          </div>
+                                        </div>
+                                    </div>
+                                 
+                                  </div>
+                    
+                                </div>
+                            </div>
+                            <!-- /.box-body -->          
+                            
+                            <div class="col-md-12">
+                                <div class="box-body border-gray bg-gray-light m-t-1">
+                                    <div class="form-group m-b-0 m-l-1 m-t-1">
+                                        <h3><input type="checkbox" class="checkichek"></label> Finanzas <button type="button" class="btn btn-sm bg-none" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button></h3>
+                                    </div>                   
+                                  <div class="table-responsive padding-10">
+                    
+                                    <table class="table table-hover no-padding">
+                                      <tbody>
+                                      <tr>
+                                        <td width="5%" align="center"><i class="fa fa-file-text-o fa-1x text-muted"></i></td>
+                                        <td width="75%">
+                                            <p class="text-muted">Balances mensuales</p>
+                                        </td>
+                                        <td width="15%" align="center"><button type="button" class="btn btn-sm bg-none" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><i class="fa fa-question fa-lg text-black" aria-hidden="true"></i></button></td>
+                                        <td width="5%" align="center"><button type="button" class="btn btn-sm bg-none"><i class="fa fa-times-circle text-danger fa-lg" aria-hidden="true"></i></button></td>
+                                      </tr>
+                                      </tbody>
+                                    </table>
+                                    <!-- /.table -->
+                    
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Dimensiones</label>
+                                            <select class="form-control mobileSelect" multiple id="menuMultipleB" 
+                                                data-title="Seleccione dimensiones" 
+                                                data-btntext-save="Seleccionar" data-btntext-cancel="Salir" data-btntext-clear="Borrar"
+                                                 data-style="default">
+                                                <option value="b1">Balances semestrales</option>
+                                                <option value="b2">Liquidaciones</option>
+                                                <option value="b3">Informes de Ventas</option>
+                                                <option value="b0">Otro</option>                    
+                                            </select>
+                                        </div>        
+                                    </div>                                    
+                    
+                                    <div class="col-md-12 hidden">
+                                        <div class="form-group m-b-0">
+                                          <div class="input-group">
+                                            <input class="form-control" type="text">
+                                            <span class="input-group-btn">
+                                              <button class="btn btn-primary" type="button">Agregar</button>
+                                            </span>
+                                          </div>
+                                        </div>
+                                    </div>
+                                 
+                                  </div>
+                    
+                                </div>
+                            </div>
+                            <!-- /.box-body -->                                        
+                
                             <div class="col-md-12 m-t-2 m-b-1" align="center">
                                 <button type="button" class="btn btn-success m-l-1">Guardar experiencia</button>
                             </div>
+
                             
                         </form>
                     </div>
@@ -720,7 +922,9 @@ $(document).ready(function(){
 <!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
 <script type="text/javascript" src="plugins/bootstrap-fullscreen-select/js/bootstrap-fullscreen-select.js"></script>
 <script>
-	$('#menuMultipleE').mobileSelect();
+	$('#menuMultipleA').mobileSelect();
+	$('#menuMultipleB').mobileSelect();
+	$('#menuMultipleC').mobileSelect();
 </script>
 
 
