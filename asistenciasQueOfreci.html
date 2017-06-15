@@ -581,14 +581,14 @@
                           
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="control-label">Empresa</label>
+                                    <label class="control-label">Empresa <span class="requiredField">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="control-label">CUIT</label>
+                                    <label class="control-label">CUIT <span class="requiredField">*</span></label>
                                     <input type="text" class="form-control" data-inputmask='"mask": "99-99999999-9"' data-mask>
                                 </div>
                             </div>
@@ -616,7 +616,7 @@
                     
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <label class="control-label">Trabajo realizado</label>
+                                    <label class="control-label">Trabajo realizado <span class="requiredField">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
@@ -630,7 +630,7 @@
                             
                             <div class="col-md-4">
                                 <div class="form-group m-b-0">
-                                    <label class="control-label">Historial laboral de Anses</label><br />
+                                    <label class="control-label">Historial laboral de Anses <span class="requiredField">*</span></label><br />
                                     <a href="#" class="btn btn-link btn"><strong>Seleccionar Archivo</strong></a>
                                     <!--<input type="file" class="form-control" data-mask="9999">-->
                                 </div>
@@ -963,8 +963,9 @@ $(document).ready(function(){
     });
   });
 </script>
+
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<!--<script src="dist/js/demo.js"></script>-->
 
 </body>
 </html>
