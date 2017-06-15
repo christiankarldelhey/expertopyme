@@ -509,20 +509,18 @@
                         <div class="form-group m-b-0 text-left">
                           <h4>Ha realizado trabajos de asesoramiento técnico?</h4>
                           <div class="row">
-                            <div class="col-md-3">
-                              <div class="btn-group btn-group-justified" data-toggle="buttons">
-                                <label href="#" class="btn btn-default active">
-                                <input  class="text-center" type="radio" name="yesNo" id="si" value="si" class="hidden" data-fv-field="yesNo">Si
-                                </label>
-                                    <label href="#" class="btn btn-default">
-                                    <input type="radio" name="yesNo" id="no" value="no" class="hidden" checked="" data-fv-field="yesNo" class="text-center">No
-                                </label>
-                              </div>
+                            <div class="col-md-8">
+                                <div class="input-group m-b-2">
+                                    <div id="radioBtn" class="btn-group">
+                                        <span class="btn active btn-primary" data-toggle="estado" data-value="Y">Si</span>
+                                        <span class="btn notActive btn-default" data-toggle="estado" data-value="N">No</span>
+                                    </div>
+                                    <input type="hidden" name="estado" id="estado" value="Y">
+                                </div> 
                             </div>
                           </div>
                         </div>
                       </div>
-        
                     </div>
                 </div>
             </div>
@@ -591,21 +589,20 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">CUIT</label>
-                                    <input type="text" class="form-control" data-mask="99-99999999-9">
+                                    <input type="text" class="form-control" data-inputmask='"mask": "99-99999999-9"' data-mask>
                                 </div>
                             </div>
                 
                             <div class="col-md-5">
                                 <label class="control-label" for="txtxxx">Asisto actualmente a esta empresa <span class="requiredField">*</span></label>
-                                <div class="btn-group btn-group-justified m-b-2" data-toggle="buttons">
-                                  <label href="#" class="btn btn-default">
-                                  <input class="text-center" type="radio" name="yesNo" id="si" value="si" data-fv-field="yesNo">Si
-                                    </label>
-                                  <label href="#" class="btn btn-default">
-                                  <input type="radio" name="yesNo" id="no" value="no" class="hidden" checked="" data-fv-field="yesNo">No
-                                    </label>
-                                </div>
-                            </div>  
+                                <div class="input-group m-b-2">
+                                    <div id="radioBtnII" class="btn-group">
+                                        <span class="btn active btn-primary" data-toggle="estadoII" data-value="Y">Si</span>
+                                        <span class="btn notActive btn-default" data-toggle="estadoII" data-value="N">No</span>
+                                    </div>
+                                    <input type="hidden" name="estadoII" id="estadoII" value="Y">
+                                </div>                        
+                            </div>                             
                             
                             <div class="col-md-7">
                                 <label class="control-label">Período</label>
@@ -627,7 +624,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Cantidad de horas</label>
-                                    <input type="text" class="form-control" data-mask="9999">
+                                    <input type="text" class="form-control" data-inputmask='"mask": "999"' data-mask>
                                 </div>
                             </div>
                             
@@ -847,9 +844,15 @@ $(document).ready(function(){
 });
 </script>
 
-
-<!-- Form Bootstrap Mask Latest compiled and minified JavaScript -->
-<script src="plugins/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+<!-- InputMask -->
+<script src="plugins/input-mask/jquery.inputmask.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script>
+    //Datemask dd/mm/yyyy
+    $("#dateinput").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+    $("[data-mask]").inputmask();
+</script>
 
 <!-- Datepicker -->
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
@@ -882,8 +885,6 @@ $(document).ready(function(){
 	$('#menuMultipleC').mobileSelect();
 </script>
 
-
-
 <script src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
 <script>
   $(function() {
@@ -895,7 +896,27 @@ $(document).ready(function(){
 })
 </script>
 
-
+<script>
+    // Tomar el valor del checkbox
+	$('#radioBtn span').on('click', function(){
+        var sel = $(this).data('value');
+        var tog = $(this).data('toggle');
+        $('#'+tog).val(sel);
+        // You can change these lines to change classes (Ex. btn-default to btn-danger)
+        $('span[data-toggle="'+tog+'"]').not('[data-value="'+sel+'"]').removeClass('active btn-primary').addClass('notActive btn-default');
+        $('span[data-toggle="'+tog+'"][data-value="'+sel+'"]').removeClass('notActive btn-default').addClass('active btn-primary');
+    });
+	
+    // Tomar el valor del checkbox
+	$('#radioBtnII span').on('click', function(){
+        var sel = $(this).data('value');
+        var tog = $(this).data('toggle');
+        $('#'+tog).val(sel);
+        // You can change these lines to change classes (Ex. btn-default to btn-danger)
+        $('span[data-toggle="'+tog+'"]').not('[data-value="'+sel+'"]').removeClass('active btn-primary').addClass('notActive btn-default');
+        $('span[data-toggle="'+tog+'"][data-value="'+sel+'"]').removeClass('notActive btn-default').addClass('active btn-primary');
+    });	
+</script>
 
 <script>
   $(function () {

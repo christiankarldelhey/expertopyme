@@ -563,14 +563,13 @@
                 
                             <div class="col-md-5">
                                 <label class="control-label" for="txtxxx">Trabaja aquí actualmente <span class="requiredField">*</span></label>
-                                <div class="btn-group btn-group-justified m-b-2" data-toggle="buttons">
-                                  <label href="#" class="btn btn-default">
-                                  <input class="text-center" type="radio" name="yesNo" id="si" value="si" data-fv-field="yesNo">Si
-                                    </label>
-                                  <label href="#" class="btn btn-default">
-                                  <input type="radio" name="yesNo" id="no" value="no" class="hidden" checked="" data-fv-field="yesNo">No
-                                    </label>
-                                </div>
+                                <div class="input-group m-b-2">
+                                    <div id="radioBtn" class="btn-group">
+                                        <span class="btn active btn-primary" data-toggle="estado" data-value="Y">Si</span>
+                                        <span class="btn notActive btn-default" data-toggle="estado" data-value="N">No</span>
+                                    </div>
+                                    <input type="hidden" name="estado" id="estado" value="Y">
+                                </div> 
                             </div>  
                             
                             <div class="col-md-7">
@@ -587,7 +586,7 @@
                                 <div class="form-group">
                                     <label class="control-label">Ejes</label>
                                     <select class="form-control mobileSelect" multiple id="menuMultipleE" 
-                                        data-title="Seleccione dimensiones" 
+                                        data-title="Seleccione ejes" 
                                         data-btntext-save="Seleccionar" data-btntext-cancel="Salir" data-btntext-clear="Borrar"
                                          data-style="default">
                                         <option value="e1">Capital humano</option>
@@ -738,6 +737,17 @@ $(document).ready(function(){
 </script>
 
 
+<script>
+    // Tomar el valor del checkbox
+	$('#radioBtn span').on('click', function(){
+        var sel = $(this).data('value');
+        var tog = $(this).data('toggle');
+        $('#'+tog).val(sel);
+        // You can change these lines to change classes (Ex. btn-default to btn-danger)
+        $('span[data-toggle="'+tog+'"]').not('[data-value="'+sel+'"]').removeClass('active btn-primary').addClass('notActive btn-default');
+        $('span[data-toggle="'+tog+'"][data-value="'+sel+'"]').removeClass('notActive btn-default').addClass('active btn-primary');
+    });
+</script>
 
 <script src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
 <script>
