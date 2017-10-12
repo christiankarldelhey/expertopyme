@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<<<<<<< HEAD
   <!-- fullCalendar 2.2.5-->
   <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
   <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
@@ -37,6 +38,10 @@
   <!-- date-range-picker -->
   <link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet">
 
+=======
+  <!-- BOOTSTRAP-Datepicker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+>>>>>>> origin/master
   <!-- ADMIN-LTE dist -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -486,16 +491,15 @@
               <div class="form-group">
                 <h4>¿Es asesor en tecnología de gestión certificado por INTI?</h4>
                 <div class="row">
-                  <div class="col-md-3">
-                    <div class="btn-group btn-group-justified" data-toggle="buttons">
-                      <label href="#" class="btn btn-default active">
-                      <input  class="text-center" type="radio" name="yesNo" id="si" value="si" class="hidden" data-fv-field="yesNo">Si
-                  </label>
-                      <label href="#" class="btn btn-default">
-                      <input type="radio" name="yesNo" id="no" value="no" class="hidden" checked="" data-fv-field="yesNo" class="text-center">No
-                  </label>
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <div id="radioAsesor" class="btn-group">
+                                <span class="btn active btn-primary" data-toggle="esAsesor" data-value="Y">Si</span>
+                                <span class="btn notActive btn-default" data-toggle="esAsesor" data-value="N">No</span>
+                            </div>
+                            <input type="hidden" name="esAsesor" id="esAsesor" value="Y">
+                        </div>                        
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -506,11 +510,12 @@
                 <div class="col-md-4">
                     <div class="form-group">
                       <label class="control-label">Número de certificado INTI</label>
-                      <input class="form-control " type="text" name="" value="">
+                      <input class="form-control " type="text" name="" data-inputmask='"mask": "9999-9999"' data-mask>
                     </div>
                 </div>
 
                 <div class="col-md-4">
+<<<<<<< HEAD
               <div class="form-group">
                 <label class="control-label">Fecha de Nacimiento *</label>
                 <div class="input-group">
@@ -522,6 +527,19 @@
                 <!-- /.input group -->
                 </div>
                          
+=======
+                  <div class="form-group">
+                    <label class="control-label">Fecha de Nacimiento</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control pull-right dateinput" id="reservation">
+                      <div class="input-group-addon bg-primary p-l-2 p-r-2">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+
+                    </div>
+                    <!-- /.input group -->
+
+>>>>>>> origin/master
                   </div>
                 </div>
               </div>
@@ -606,6 +624,7 @@
 <!-- Slimscroll -->
 <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
+<<<<<<< HEAD
 <!--<script src="plugins/fastclick/fastclick.js"></script>-->
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
@@ -620,11 +639,27 @@
 <script src="plugins/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
 <script type="text/javascript"> 
   $("[data-mask]").inputmask();
+=======
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- iCheck -->
+<script src="plugins/iCheck/icheck.min.js"></script>
+<!-- InputMask -->
+<script src="plugins/input-mask/jquery.inputmask.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script>
+    //Datemask dd/mm/yyyy
+    $(".dateinput").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+    $("[data-mask]").inputmask();
+>>>>>>> origin/master
 </script>
 <!-- Datepicker -->
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="plugins/datepicker/locales/bootstrap-datepicker.es.js"></script>
 <script type="application/javascript">
+<<<<<<< HEAD
   $('input.dateinput').datepicker({
     language: "es",
     autoclose: true,
@@ -741,6 +776,76 @@ $("button.remove").on("click", remove);
 
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+=======
+	$('input.dateinput').datepicker({
+		language: "es",
+		autoclose: true,
+		clearBtn: true,
+		orientation: "top"
+	});
+</script>
+
+
+<script>
+    // Tomar el valor del checkbox
+	$('#radioAsesor span').on('click', function(){
+        var sel = $(this).data('value');
+        var tog = $(this).data('toggle');
+        $('#'+tog).val(sel);
+        // You can change these lines to change classes (Ex. btn-default to btn-danger)
+        $('span[data-toggle="'+tog+'"]').not('[data-value="'+sel+'"]').removeClass('active btn-primary').addClass('notActive btn-default');
+        $('span[data-toggle="'+tog+'"][data-value="'+sel+'"]').removeClass('notActive btn-default').addClass('active btn-primary');
+    });
+</script>
+
+
+
+<script>
+$(function() {
+  //Enable iCheck plugin for checkboxes
+  //iCheck for checkbox and radio inputs
+  $('.mailbox-messages input[type="checkbox"]').iCheck({
+    checkboxClass: 'icheckbox_flat-blue',
+    radioClass: 'iradio_flat-blue'
+  });
+
+  //Enable check and uncheck all functionality
+  $(".checkbox-toggle").click(function() {
+    var clicks = $(this).data('clicks');
+    if (clicks) {
+      //Uncheck all checkboxes
+      $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
+      $(".fa", this).removeClass("fa-check-square-o").addClass('fa-square-o');
+    } else {
+      //Check all checkboxes
+      $(".mailbox-messages input[type='checkbox']").iCheck("check");
+      $(".fa", this).removeClass("fa-square-o").addClass('fa-check-square-o');
+    }
+    $(this).data("clicks", !clicks);
+  });
+
+  //Handle starring for glyphicon and font awesome
+  $(".mailbox-star").click(function(e) {
+    e.preventDefault();
+    //detect type
+    var $this = $(this).find("a > i");
+    var glyph = $this.hasClass("glyphicon");
+    var fa = $this.hasClass("fa");
+
+    //Switch states
+    if (glyph) {
+      $this.toggleClass("glyphicon-star");
+      $this.toggleClass("glyphicon-star-empty");
+    }
+
+    if (fa) {
+      $this.toggleClass("fa-star");
+      $this.toggleClass("fa-star-o");
+    }
+  });
+});
+</script>
+>>>>>>> origin/master
 
 </body>
 

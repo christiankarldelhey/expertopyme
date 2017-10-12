@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>experienciaLaboral</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Inscribirme como experto</title>
+<!-- Tell the browser to be responsive to screen width -->
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
+<!-- BOOTSTRAP -->
+<!-- Bootstrap 3.3.6 -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="plugins/jasny-bootstrap/css/jasny-bootstrap.css">
 
-  <!-- BOOTSTRAP -->
-  <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- fullCalendar 2.2.5-->
-  <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
-  <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
-  <!-- Theme style -->
+<!-- ADMIN-LTE dist -->
+<link rel="stylesheet" href="dist/css/AdminLTE.css">
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+   folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+
+<!-- iCheck -->
+<link href="plugins/iCheck/all.css" rel="stylesheet">
+
+<!-- BOOTSTRAP-Tags Input files -->
+<link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.css">
+<link rel="stylesheet" href="plugins/bootstrap-tagsinput-latest/examples/assets/app.css">
+
+<!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+<link rel="stylesheet" type="text/css" href="plugins/bootstrap-fullscreen-select/css/bootstrap-fullscreen-select.css" />
+
+<!-- BOOTSTRAP-Choosen Autocomplete -->
+<link rel="stylesheet" href="plugins/bootstrap-chosen-master/bootstrap-chosen.css">
+
+<!-- BOOTSTRAP-Datepicker -->
+<link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+<!-- date-range-picker -->
+<link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet">
 
 
   <!-- ADMIN-LTE dist -->
@@ -29,7 +49,6 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
   <!-- iCheck -->
-
 
   <!-- PALTA dist-palta -->
   <link rel="stylesheet" href="dist-palta/css/poncho.min.css">
@@ -44,9 +63,8 @@
   <![endif]-->
 
 </head>
-
 <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
-  <div class="wrapper">
+<div class="wrapper">
 
   <header class="header" style="background-color:#FFFFFF; z-index:15000;">
     <nav class="navbar navbar-default" style="z-index: 10000;">
@@ -231,365 +249,566 @@
     </nav>
   </header>
 
-    <aside class="main-sidebar">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar">
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
 
-        <ul class="sidebar-menu side-bar-margin">
-          <!--<li class="header">SIDE NAVIGATOR</li>-->
-          <li class="treeview hidden-xs">
+      <!-- Sidebar user panel -->
+      <!--
+      <ul class="sidebar-menu">
+      <li>
+      <div class="user-panel">
+        <div class="pull-left image" align="center">
+          <i class="fa fa-user navIco" style="color:#FFFFFF; margin-left:10px;"></i>
+        </div>
+        <div class="pull-left info">
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      </li>
+      </ul>
+      -->
+
+      <!-- search form -->
+      <!--
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      -->
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu side-bar-margin">
+		<!--<li class="header">SIDE NAVIGATOR</li>-->
+        <li class="treeview hidden-xs">
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-              <i class="fa fa-bars"></i>
-              <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+                <span class="sr-only">Toggle navigation</span>
             </a>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-home"></i> <span>Inicio</span>
-              <span class="pull-right-container">
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-home"></i> <span>Inicio</span>
+            <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-files-o"></i>
-              <span>Layout Options</span>
-              <span class="pull-right-container">
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Layout Options</span>
+            <span class="pull-right-container">
               <span class="label label-primary pull-right">4</span>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-              <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-              <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="pages/widgets.html">
-              <i class="fa fa-th"></i> <span>Widgets</span>
-              <span class="pull-right-container">
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
+            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="pages/widgets.html">
+            <i class="fa fa-th"></i> <span>Widgets</span>
+            <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span>
-            </a>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-share"></i> <span>Multilevel</span>
-              <span class="pull-right-container">
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i> <span>Multilevel</span>
+            <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-              <li>
-                <a href="#"><i class="fa fa-circle-o"></i> Level One
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+            <li>
+              <a href="#"><i class="fa fa-circle-o"></i> Level One
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
-                <ul class="treeview-menu">
-                  <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                  <li>
-                    <a href="#"><i class="fa fa-circle-o"></i> Level Two
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                <li>
+                  <a href="#"><i class="fa fa-circle-o"></i> Level Two
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>
                   </a>
-                    <ul class="treeview-menu">
-                      <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                      <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-pie-chart"></i>
-              <span>Charts</span>
-              <span class="pull-right-container">
+                  <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Charts</span>
+            <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-              <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-              <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-              <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-laptop"></i>
-              <span>UI Elements</span>
-              <span class="pull-right-container">
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>UI Elements</span>
+            <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-              <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-              <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-              <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-              <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-              <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-edit"></i> <span>Forms</span>
-              <span class="pull-right-container">
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
+            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
+            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
+            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Forms</span>
+            <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-              <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-              <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <!-- /.sidebar -->
-    </aside>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+          </ul>
+        </li>
+        <!--
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>Tables</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="pages/calendar.html">
+            <i class="fa fa-calendar"></i> <span>Calendar</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-red">3</small>
+              <small class="label pull-right bg-blue">17</small>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/mailbox/mailbox.html">
+            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-yellow">12</small>
+              <small class="label pull-right bg-green">16</small>
+              <small class="label pull-right bg-red">5</small>
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>Examples</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+          </ul>
+        </li>
+        <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li class="header">LABELS</li>
+        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+        -->
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
 
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
 
+    <section class="content-header container">
+      <ol class="breadcrumb m-b-3">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acciones</a></li>
+        <li><a href="#">Inscribirme como experto</a></li>
+        <li class="active">Experiencia laboral</li>
+      </ol>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <section class="content-header container">
+      <h3 class="m-b-2">Inscribirme como experto PyME</h3>
 
-        <ol class="breadcrumb m-t-0 m-b-3">
-          <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-          <li class="breadcrumb-item"><a href="#">Acciones</a></li>
-          <li class="breadcrumb-item"><a href="#">Inscribirme como Experto</a></li>
-          <li class="breadcrumb-item active">Experiencia Laboral</li>
-        </ol>
-
-        <h3 class="m-b-2">Inscribirme como experto PYME </h3>
-        <div class="panel panel-default">
-          <div class="panel-heading bg-primary">
-            <h4 class="text-white">Datos personales</h4></div>
-          <div class="panel-body">
-
-            <!-- FORM AZUL DATOS PERSONALES -->
-            <form class="form-azul">
-
-              <div class="table-item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="control-label">Profesión</label>
-                      <select class="form-control borrar-select" name="">
-                      <option value="" hidden></option>
-                      <option value="1" class="ignore">opt1</option>
-                      <option value="2" class="ignore">opt2</option>
-                    </select>
-                      
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="control-label">¿Pertenece a una institución?</label>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <div class="btn-group btn-group-justified" data-toggle="buttons">
-                            <label href="#" class="btn btn-default active">
-                            <input  class="text-center" type="radio" name="yesNo" id="si" value="si" class="hidden" data-fv-field="yesNo">Si
-                        </label>
-                            <label href="#" class="btn btn-default">
-                            <input type="radio" name="yesNo" id="no" value="no" class="hidden" checked="" data-fv-field="yesNo" class="text-center">No
-                        </label>
-                          </div>
+        <div class="row panels-row">
+            <div class="col-md-12">
+                <div class="alert alert-info">
+                    <div class="media">
+                        <div class="media-left">
+                            <i class="fa fa-arrow-circle-o-right fa-fw fa-4x text-primary"></i> </div>
+                        <div class="media-body">
+                            <h4><b>¡Importante!</b></h4>
+                            <p class="margin-0">Asegúrese de que los datos cargados sean correctos, ya que una vez enviados no se podrán volver a editar.</p>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-
-              <div class="table-item">
-                <h4>Trabajos en relación de dependencia en puestos de Jefatura o superiores</h4>
-                <div class="text-with-icon m-t-1">
-                  <i class="fa fa-exclamation-circle text-muted"></i>
-                  <h4>Le informamos que en caso de declarar trabajos en relación de dependencia Ud. deberá obligatoriamente adjuntar la historia laboral de Anses</h4>
+            </div>           
+        
+            <div class="col-md-12">
+                <div class="panel panel-default">
+        
+                    <div class="panel-heading bg-primary text-white text-left">
+                        <h4>Experiencia Laboral en puestos de jefatura o superiores</h4>
+                    </div>
+        
+                    <div class="panel-body ">
+                        <div class="table-responsive mailbox-messages">
+                            <table class="table table-hover">
+                                <tbody>
+                                <tr>
+                                <td width="5%" align="center"><i class="fa fa-file-text-o fa-1x text-muted"></i></td>
+                                <td width="35%">
+                                <p class="text-muted">Trabajo en relacion de dependencia Nro.1</p>
+                                </td>
+                                <td width="15%" align="center"><a href="#" class="btn btn-sm btn-success btn-block">Editar</a></td>
+                                <td width="5%" align="center"><a href="#"><i class="fa fa-search fa-1x"></i></a></td>
+                                </tr>
+                                <tr>
+                                <td width="5%" align="center"><i class="fa fa-file-text-o fa-1x text-muted"></i></td>
+                                <td width="35%">
+                                <p class="text-muted">Trabajo en relacion de dependencia Nro.2</p>
+                                </td>
+                                <td width="15%" align="center"><a href="#" class="btn btn-sm btn-success btn-block">Editar</a></td>
+                                <td width="5%" align="center"><a href="#"><i class="fa fa-search fa-1x"></i></a></td>
+                                </tr>                  
+                                
+                                </tbody>
+                            </table>
+                            <!-- /.table -->
+                            <button type="button" class="btn btn-primary pull-left m-t-2"><i class="fa fa-plus-square" aria-hidden="true"></i> Nueva</button>
+                            <button type="button" class="btn btn-success m-t-2 m-l-1">Enviar experiencias</button>
+                        </div>
+                    </div>
                 </div>
-                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
-              </div>
+            </div>
+        </div>      
+              
+              
+        <div class="row panels-row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+        
+                    <div class="panel-heading bg-primary text-white text-left">
+                        <h4>Carga de experiencia laboral</h4>
+                    </div>
+        
+                    <div class="panel-body">
+                        <!-- FORM AZUL DATOS PERSONALES -->        
+                        <form class="form-azul">
 
-              <div class="table-item">
-                <h4>En caso de declarar trabajos en relación de dependencia, adjuntar historial laboral de ANSES</h4>
-                <a href="#" class="m-t-2 btn btn-link btn"><strong>Seleccionar Archivo</strong></a>
-              </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Cargo <span class="requiredField">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>                          
 
-              <div class="table-item">
-                <h4>Temáticas utilizadas<br>
-                Seleccione con X dentro de cada grupo las temáticas que conoce y que haya utilizado asistiendo a empresas</h4>
-                <h4 class="m-t-2">Procesos:</h4>
-                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
-                <h4 class="m-t-2">Finanzas:</h4>
-                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
-                <h4 class="m-t-2">Administración:</h4>
-                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
-                <h4 class="m-t-2">Recursos Humanos:</h4>
-                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
-                <h4 class="m-t-2">Sistemas de Gestión:</h4>
-                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
-                <h4 class="m-t-2">Tecnología:</h4>
-                <a href="#" class="m-t-2 btn btn-primary btn"><i class="fa fa-plus-square-o fa-lg"></i>   Agregar Nuevo</a>
-              </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Empresa <span class="requiredField">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                
+                            <div class="col-md-5">
+                                <label class="control-label" for="txtxxx">Trabaja aquí actualmente <span class="requiredField">*</span></label>
+                                <div class="input-group m-b-2">
+                                    <div id="radioBtn" class="btn-group">
+                                        <span class="btn active btn-primary" data-toggle="estado" data-value="Y">Si</span>
+                                        <span class="btn notActive btn-default" data-toggle="estado" data-value="N">No</span>
+                                    </div>
+                                    <input type="hidden" name="estado" id="estado" value="Y">
+                                </div> 
+                            </div>  
+                            
+                            <div class="col-md-7">
+                                <label class="control-label">Período <span class="requiredField">*</span></label>
+                                <div class="input-group input-daterange m-b-2" style="width:100%;">
+                                    <span class="input-group-addon bg-primary" style="padding: 10px;"> DESDE </span>
+                                    <input type="text" id="fechaSimDesde" class="form-control" data-mask="99/99/9999">
+                                    <span class="input-group-addon bg-primary" style="padding: 10px;"> HASTA </span>
+                                    <input type="text" id="fechaSimHasta" class="form-control" data-mask="99/99/9999">
+                                </div>                                         
+                            </div>                    
 
-              <div class="table-item">
-                <h4>Breve descripción de su perfil profesional:</h4>
-                <div class="form-group m-t-2">
-                  <textarea class="form-control" type="text"></textarea>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label">Ejes <span class="requiredField">*</span></label>
+                                    <select class="form-control mobileSelect" multiple id="menuMultipleE" 
+                                        data-title="Seleccione ejes" 
+                                        data-btntext-save="Seleccionar" data-btntext-cancel="Salir" data-btntext-clear="Borrar"
+                                         data-style="default">
+                                        <option value="e1">Capital humano</option>
+                                        <option value="e2">Finanzas</option>
+                                        <option value="e3">Comercialización y comunicación</option>
+                                        <option value="e4">Estrategia, sistemas y métodos de organización</option>
+                                        <option value="e5">Procesos, calidad y organización industrial</option>                    
+                                        <option value="e6">Innovación, desarrollo y tecnología</option>
+                                        <option value="e7">Seguridad, higiene y medioambiente</option>
+                                        <option value="e8">Abastecimiento y logística</option>                                                
+                                    </select>
+                                </div>        
+                            </div> 
+                            
+                            <div class="col-md-4">
+                                <div class="form-group m-b-0">
+                                    <label class="control-label">Historial laboral de Anses</label><br />
+                                    <a href="#" class="btn btn-link btn"><strong>Seleccionar Archivo</strong></a>
+                                    <!--<input type="file" class="form-control" data-mask="9999">-->
+                                </div>
+                            </div>    
+
+                            
+                            <div class="col-md-12 m-t-2 m-b-1" align="center">
+                                <button type="button" class="btn btn-success m-l-1">Guardar experiencia</button>
+                            </div>
+                            
+                        </form>
+                    </div>
                 </div>
-                <div class="text-center">
-                  <a href="#" class="m-t-2 btn btn-success btn">Guardar</a>
-                </div>
-              </div>
-
-              <div class="row table-item">
-                <div class="container">
-
-                </div>
-              </div>
-
-            </form>
-          </div>
-        </div>
-      </section>
+            </div>
+        </div>                  
+              
+     
+  
+    </section>
+    <!-- /.content -->
 
     <section class="section-botonera container-fluid bg-info text-center center-block">
       <button class="btn bg-white text-primary"><i class="fa fa-print text-primary" aria-hidden="true"></i> IMPRIMIR</button>
       <button class="btn bg-white text-primary"><i class="fa fa-envelope-o text-primary" aria-hidden="true"></i> ENVIAR POR MAIL</button>
       <button class="btn bg-white text-primary"><i class="fa fa-download text-primary" aria-hidden="true"></i>DESCARGAR</button>
     </section>
-
-    </div>
-
-    <!-- /.content-wrapper -->
-
-
-    <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
   </div>
-  <!-- ./wrapper -->
 
-  <footer class="main-footer" style="padding-bottom: 32px; padding-top: 60px; border-top: 1px solid #cacaca; background:#FFFFFF; margin-left: 0px !important;">
+  <!-- /.content-wrapper -->
+
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<footer class="main-footer" style="padding-bottom: 32px; padding-top: 60px; border-top: 1px solid #cacaca; background:#FFFFFF; margin-left: 0px !important;">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <img class="image-responsive" src="dist-palta/img/logoMinisterio.png" alt="Ministerio de Producción">
-          <br>
-          <p class="text-muted small">Los contenidos de Produccion.gob.ar están licenciados bajo <a href="https://creativecommons.org/licenses/by/2.5/ar/">Creative Commons Reconocimiento 2.5 Argentina License</a>
-          </p>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div id="nav_menu-3" class="widget_nav_menu">
-            <div class="menu-footer-b-container">
-              <ul id="menu-footer-b" class="menu">
-                <li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="http:/#">Item I</a>
-                </li>
-                <li id="menu-item-153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153"><a href="http:/#">Item II</a>
-                </li>
-                <li id="menu-item-154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-154"><a href="http:/#">Item III</a>
-                </li>
-                <li id="menu-item-155" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-155"><a href="http:/#">Item IV</a>
-                </li>
-              </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="image-responsive" src="dist-palta/img/logoMinisterio.png" alt="Ministerio de Producción">
+                <br>
+                <p class="text-muted small">Los contenidos de Produccion.gob.ar están licenciados bajo <a href="https://creativecommons.org/licenses/by/2.5/ar/">Creative Commons Reconocimiento 2.5 Argentina License</a>
+                </p>
             </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div id="nav_menu-2" class="widget_nav_menu">
-            <div class="menu-footer-a-container">
-              <ul id="menu-footer-a" class="menu">
-                <li id="menu-item-150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"><a href="http:/#">Item 1</a>
-                </li>
-                <li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151"><a href="http:/#">Item 2</a>
-                </li>
-              </ul>
+            <div class="col-md-3 col-sm-6">
+                <div id="nav_menu-3" class="widget_nav_menu">
+                    <div class="menu-footer-b-container">
+                        <ul id="menu-footer-b" class="menu">
+                            <li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="http:/#">Item I</a>
+                            </li>
+                            <li id="menu-item-153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153"><a href="http:/#">Item II</a>
+                            </li>
+                            <li id="menu-item-154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-154"><a href="http:/#">Item III</a>
+                            </li>
+                            <li id="menu-item-155" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-155"><a href="http:/#">Item IV</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="col-md-3 col-sm-6">
+                <div id="nav_menu-2" class="widget_nav_menu">
+                    <div class="menu-footer-a-container">
+                        <ul id="menu-footer-a" class="menu">
+                            <li id="menu-item-150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"><a href="http:/#">Item 1</a>
+                            </li>
+                            <li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151"><a href="http:/#">Item 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </footer>
+</footer>
 
 
-  <!-- jQuery 2.2.3 -->
-  <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
-  <!-- Bootstrap 3.3.6 -->
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-  <!-- Slimscroll -->
-  <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-  <!-- FastClick -->
-  <script src="plugins/fastclick/fastclick.js"></script>
-  <!-- AdminLTE App -->
-  <script src="dist/js/app.min.js"></script>
-  <!-- iCheck -->
-  <script src="plugins/iCheck/icheck.min.js"></script>
-  <!-- Page Script -->
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- iCheck -->
+<script src="plugins/iCheck/icheck.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('input.checkichek').iCheck({
+    checkboxClass: 'icheckbox_flat',
+  });
+});
+</script>
 
 
+<!-- Form Bootstrap Mask Latest compiled and minified JavaScript -->
+<script src="plugins/jasny-bootstrap/js/jasny-bootstrap.js"></script>
 
-  <script>
-    $(function() {
-      //Enable iCheck plugin for checkboxes
-      //iCheck for checkbox and radio inputs
-      $('.mailbox-messages input[type="checkbox"]').iCheck({
-        checkboxClass: 'icheckbox_flat-blue',
-        radioClass: 'iradio_flat-blue'
-      });
+<!-- Datepicker -->
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="plugins/datepicker/locales/bootstrap-datepicker.es.js"></script>
+<script type="application/javascript">
+	$('input.input-daterange').datepicker({
+		language: "es",
+		autoclose: true,
+		clearBtn: true,
+		orientation: "top"
+	});
+	$('.input-daterange input').datepicker({
+		language: "es",
+		autoclose: true,
+		clearBtn: true,
+		orientation: "top"
+	});	
+</script>
 
-      //Enable check and uncheck all functionality
-      $(".checkbox-toggle").click(function() {
-        var clicks = $(this).data('clicks');
-        if (clicks) {
-          //Uncheck all checkboxes
-          $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
-          $(".fa", this).removeClass("fa-check-square-o").addClass('fa-square-o');
-        } else {
-          //Check all checkboxes
-          $(".mailbox-messages input[type='checkbox']").iCheck("check");
-          $(".fa", this).removeClass("fa-square-o").addClass('fa-check-square-o');
-        }
-        $(this).data("clicks", !clicks);
-      });
+<!-- TagsInput -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="plugins/bootstrap-tagsinput-latest/dist/bootstrap-tagsinput.js"></script>
+<script src="plugins/bootstrap-tagsinput-latest/examples/assets/app.js"></script>
 
-      //Handle starring for glyphicon and font awesome
-      $(".mailbox-star").click(function(e) {
-        e.preventDefault();
-        //detect type
-        var $this = $(this).find("a > i");
-        var glyph = $this.hasClass("glyphicon");
-        var fa = $this.hasClass("fa");
+<!-- BOOTSTRAP-FULLSCREEN-SELECT files -->
+<script type="text/javascript" src="plugins/bootstrap-fullscreen-select/js/bootstrap-fullscreen-select.js"></script>
+<script>
+	$('#menuMultipleE').mobileSelect();
+</script>
 
-        //Switch states
-        if (glyph) {
-          $this.toggleClass("glyphicon-star");
-          $this.toggleClass("glyphicon-star-empty");
-        }
 
-        if (fa) {
-          $this.toggleClass("fa-star");
-          $this.toggleClass("fa-star-o");
-        }
-      });
+<script>
+    // Tomar el valor del checkbox
+	$('#radioBtn span').on('click', function(){
+        var sel = $(this).data('value');
+        var tog = $(this).data('toggle');
+        $('#'+tog).val(sel);
+        // You can change these lines to change classes (Ex. btn-default to btn-danger)
+        $('span[data-toggle="'+tog+'"]').not('[data-value="'+sel+'"]').removeClass('active btn-primary').addClass('notActive btn-default');
+        $('span[data-toggle="'+tog+'"][data-value="'+sel+'"]').removeClass('notActive btn-default').addClass('active btn-primary');
     });
-  </script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="dist/js/demo.js"></script>
-</body>
+</script>
 
+<script src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
+<script>
+  $(function() {
+	$('.chosen-select').chosen();
+	$('.chosen-select-deselect').chosen({ allow_single_deselect: true });
+
+	$('[data-toggle="tooltip"]').tooltip();
+	$('[data-toggle="popover"]').popover();
+})
+</script>
+
+
+
+<script>
+  $(function () {
+    //Enable iCheck plugin for checkboxes
+    //iCheck for checkbox and radio inputs
+    $('.mailbox-messages input[type="checkbox"]').iCheck({
+      checkboxClass: 'icheckbox_flat-blue',
+      radioClass: 'iradio_flat-blue'
+    });
+
+    //Enable check and uncheck all functionality
+    $(".checkbox-toggle").click(function () {
+      var clicks = $(this).data('clicks');
+      if (clicks) {
+        //Uncheck all checkboxes
+        $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
+        $(".fa", this).removeClass("fa-check-square-o").addClass('fa-square-o');
+      } else {
+        //Check all checkboxes
+        $(".mailbox-messages input[type='checkbox']").iCheck("check");
+        $(".fa", this).removeClass("fa-square-o").addClass('fa-check-square-o');
+      }
+      $(this).data("clicks", !clicks);
+    });
+
+    //Handle starring for glyphicon and font awesome
+    $(".mailbox-star").click(function (e) {
+      e.preventDefault();
+      //detect type
+      var $this = $(this).find("a > i");
+      var glyph = $this.hasClass("glyphicon");
+      var fa = $this.hasClass("fa");
+
+      //Switch states
+      if (glyph) {
+        $this.toggleClass("glyphicon-star");
+        $this.toggleClass("glyphicon-star-empty");
+      }
+
+      if (fa) {
+        $this.toggleClass("fa-star");
+        $this.toggleClass("fa-star-o");
+      }
+    });
+  });
+</script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
+</body>
 </html>
